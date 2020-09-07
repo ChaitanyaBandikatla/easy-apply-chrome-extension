@@ -1,0 +1,18 @@
+{
+  "manifest_version": 1,
+
+  "name": "Easy Apply",
+  "description": "Chrome Extension for filling up job applications",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "favicon.png",
+    "default_popup": "popup.html",
+	"default_title": "Click here!"
+  },
+    
+  "permissions": [
+    "activeTab",
+    "http://*/*","https://*/*"
+  ]
+}
