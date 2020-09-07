@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.springframework.org/schema/data/jaxb"
+      xmlns:sec="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{fragments/main_layout}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Back to Spring</title>
+</head>
+<body>
+<div layout:fragment="content" class="container" >
+    <main role="main" class="container">
+        <div class="jumbotron">
+            <h1>Back to Spring</h1>
+            <p class="lead">This example is a quick exercise to use bootstrap with Spring. We used simple design in
+                bootstrap. I just i wanted to show integration you.</p>
+            <p Message example; th:text="${message}"></p>
+            <p Date example; th:text="${date}"></p>
+            <a class="btn btn-lg btn-primary" href="/login" role="button">Login &raquo;</a>
+            <a class="btn btn-lg btn-primary" href="/register" role="button">Register &raquo;</a>
+        </div>
+    </main>
+</div>
+</body>
+</html>

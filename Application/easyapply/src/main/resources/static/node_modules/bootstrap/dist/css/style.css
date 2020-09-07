@@ -1,0 +1,20 @@
+body {
+    min-height: 75rem;
+    padding-top: 4.5rem;
+}
+/* Custom page CSS  */
+/* Not required for template or sticky footer method. */
+
+main > .container {
+    padding: 60px 15px 0;
+}
+.footer {
+    background-color: #f5f5f5;
+}
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+code {
+    font-size: 80%;
+}
