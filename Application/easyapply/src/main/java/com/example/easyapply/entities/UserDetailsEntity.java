@@ -18,6 +18,7 @@ public class UserDetailsEntity {
 
     @Id
     @Column(name = "user_id")
+    @GeneratedValue
     public int getUserId() {
         return userId;
     }
