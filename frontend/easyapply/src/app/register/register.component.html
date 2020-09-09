@@ -35,6 +35,7 @@
             [hideRequiredMarker]="registerForm.value.hideRequired"
             [floatLabel]="registerForm.value.floatLabel">
             <input matInput placeholder="Password" [(ngModel)]="registerForm.value.password" required type='password'>
+            <mat-hint align="end">At least 6 characters long.</mat-hint>
         </mat-form-field>
         <div class="form-group">  
             <button mat-raised-button color="primary" (click)="onSubmit()">Register</button>  
