@@ -15,6 +15,8 @@ public class UserDetailsEntity {
     private String email;
     private Timestamp createdOn;
     private Timestamp lastLogin;
+    private String firstName;
+    private String lastName;
 
     @Id
     @Column(name = "user_id")
@@ -63,6 +65,10 @@ public class UserDetailsEntity {
         return createdOn;
     }
 
+    public void setCreatedOn(Object createdOn) {
+        this.createdOn = (Timestamp) createdOn;
+    }
+
     public void setCreatedOn(Timestamp createdOn) {
         this.createdOn = createdOn;
     }
@@ -71,6 +77,10 @@ public class UserDetailsEntity {
     @Column(name = "last_login")
     public Timestamp getLastLogin() {
         return lastLogin;
+    }
+
+    public void setLastLogin(Object lastLogin) {
+        this.lastLogin = (Timestamp) lastLogin;
     }
 
     public void setLastLogin(Timestamp lastLogin) {
@@ -93,5 +103,25 @@ public class UserDetailsEntity {
     @Override
     public int hashCode() {
         return Objects.hash(userId, username, password, email, createdOn, lastLogin);
+    }
+
+    @Basic
+    @Column(name = "first_name")
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    @Basic
+    @Column(name = "last_name")
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }
