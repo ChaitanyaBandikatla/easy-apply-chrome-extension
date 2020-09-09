@@ -1,5 +1,5 @@
-<h1>Register</h1>
 <form class = "centered" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <h1>Register</h1>
     <div class="example-container">
         <label for="email">Email</label>
         <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': registerFormControls.email.errors }" />
