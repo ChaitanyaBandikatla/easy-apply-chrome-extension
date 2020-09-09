@@ -1,32 +1,43 @@
-<form class = "centered" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+<mat-card class="centered">
     <h1>Register</h1>
     <div class="example-container">
-        <label for="email">Email</label>
-        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': registerFormControls.email.errors }" />
-        <div *ngIf="registerFormControls.email.errors" class="invalid-feedback">
-            <div *ngIf="registerFormControls.email.errors.required">Last Name is required</div>
-        </div>
-    </div>
-    <div class="example-container">
-        <label for="username">Username</label>
-        <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': registerFormControls.username.errors }" />
-        <div *ngIf="registerFormControls.username.errors" class="invalid-feedback">
-            <div *ngIf="registerFormControls.username.errors.required">Username is required</div>
-        </div>
-    </div>
-    <div class="example-container">
-        <label for="password">Password</label>
-        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': registerFormControls.password.errors }" />
-        <div *ngIf="registerFormControls.password.errors" class="invalid-feedback">
-            <div *ngIf="registerFormControls.password.errors.required">Password is required</div>
-            <div *ngIf="registerFormControls.password.errors.minlength">Password must be at least 6 characters</div>
-        </div>
-    </div>
-    <div class="example-container">
-        <button class="btn btn-primary">
-            <span class="spinner-border spinner-border-sm mr-1"></span>
-            Register
-        </button>
-        <a routerLink="/login" class="btn btn-link">Cancel</a>
-    </div>
-</form>
+        <mat-form-field
+            [hideRequiredMarker]="registerForm.value.hideRequired"
+            [floatLabel]="registerForm.value.floatLabel">
+            <input matInput placeholder="First Name" [(ngModel)]="registerForm.value.firstname" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field
+            [hideRequiredMarker]="registerForm.value.hideRequired"
+            [floatLabel]="registerForm.value.floatLabel">
+            <input matInput placeholder="Middle Name" [(ngModel)]="registerForm.value.middlename">
+        </mat-form-field>
+        <br>
+        <mat-form-field
+            [hideRequiredMarker]="registerForm.value.hideRequired"
+            [floatLabel]="registerForm.value.floatLabel">
+            <input matInput placeholder="Last Name" [(ngModel)]="registerForm.value.lastname" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field
+            [hideRequiredMarker]="registerForm.value.hideRequired"
+            [floatLabel]="registerForm.value.floatLabel">
+            <input matInput placeholder="Username" [(ngModel)]="registerForm.value.username" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field
+            [hideRequiredMarker]="registerForm.value.hideRequired"
+            [floatLabel]="registerForm.value.floatLabel">
+            <input matInput placeholder="Email ID" [(ngModel)]="registerForm.value.email" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field
+            [hideRequiredMarker]="registerForm.value.hideRequired"
+            [floatLabel]="registerForm.value.floatLabel">
+            <input matInput placeholder="Password" [(ngModel)]="registerForm.value.password" required type='password'>
+        </mat-form-field>
+        <div class="form-group">  
+            <button mat-raised-button color="primary" (click)="onSubmit()">Register</button>  
+        </div> 
+    </div>  
+</mat-card>
