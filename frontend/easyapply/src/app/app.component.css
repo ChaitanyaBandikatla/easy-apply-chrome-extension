@@ -5,11 +5,3 @@
     background-image:url('https://wallpaperaccess.com/full/656665.jpg');
     background-position:50% 50%;
   }
-  .font-heading {
-    font-size: 96px;
-  }
-  .centered {
-    position: absolute; /* or absolute */
-    top: 30%;
-    left: 40%;
-  }
