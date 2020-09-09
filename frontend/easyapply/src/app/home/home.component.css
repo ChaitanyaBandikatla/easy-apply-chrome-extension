@@ -2,3 +2,11 @@
 .example-button-row a {
   margin-right: 8px;
 }
+.font-heading {
+    font-size: 96px;
+  }
+  .centered {
+    position: absolute; /* or absolute */
+    top: 30%;
+    left: 40%;
+  }

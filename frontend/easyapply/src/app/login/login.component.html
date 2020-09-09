@@ -1,1 +1,19 @@
-<p>login works!</p>
+<mat-card class="centered">
+    <h1>Login</h1>
+    <div class="example-container">
+        <mat-form-field
+            [hideRequiredMarker]="options.value.hideRequired"
+            [floatLabel]="options.value.floatLabel">
+            <input matInput placeholder="Username" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field
+            [hideRequiredMarker]="options.value.hideRequired"
+            [floatLabel]="options.value.floatLabel">
+            <input matInput placeholder="Password" required type='password'>
+        </mat-form-field>
+        <div class="form-group">  
+            <button mat-raised-button color="primary" (click)="onSubmit()">Login</button>  
+        </div> 
+    </div>  
+</mat-card>
