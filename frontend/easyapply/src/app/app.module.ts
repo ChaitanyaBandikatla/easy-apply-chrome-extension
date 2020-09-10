@@ -32,7 +32,6 @@ import { JobProfileRoutingModule } from './job-profile/job-profile-routing.modul
     ReactiveFormsModule,
     MatCardModule,
     MatFormFieldModule,
-    ReactiveFormsModule,
     MatCardModule,
     MatFormFieldModule,
     MatIconModule,
