@@ -16,7 +16,9 @@ export class RegisterComponent {
     'lastname': new FormControl('', Validators.required),
     'username': new FormControl('', Validators.required),
     'email': new FormControl('', [Validators.required, Validators.email]),
-    'password': new FormControl('', [Validators.required, Validators.minLength(6)])
+    'password': new FormControl('', [Validators.required, Validators.minLength(6)]),
+    hideRequired: false,
+    floatLabel: 'auto',
   });
 
   public registerFormErrors = (controlName: string, errorName: string) => {
