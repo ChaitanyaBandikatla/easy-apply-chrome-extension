@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
-import { RouterModule, Routes } from '@angular/router'
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
@@ -15,14 +14,6 @@ import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { JobProfileComponent } from './job-profile/job-profile.component'; 
-
-const routes: Routes = [
-  {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent},
-  {path: 'home', component: HomeComponent},
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'jobprofile/new', component: JobProfileComponent},
-];
 
 @NgModule({
   declarations: [
@@ -40,7 +31,6 @@ const routes: Routes = [
     ReactiveFormsModule,
     MatCardModule,
     MatFormFieldModule,
-    RouterModule.forRoot(routes),
     ReactiveFormsModule,
     MatCardModule,
     MatFormFieldModule,
