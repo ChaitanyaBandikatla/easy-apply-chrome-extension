@@ -13,13 +13,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms'; 
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { JobProfileComponent } from './job-profile/job-profile.component'; 
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'home', component: HomeComponent},
-  { path: '', redirectTo: 'home', pathMatch: 'full' }
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'jobprofile/new', component: JobProfileComponent},
 ];
 
 @NgModule({
@@ -27,7 +29,8 @@ const routes: Routes = [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    JobProfileComponent
   ],
   imports: [
     BrowserModule,
