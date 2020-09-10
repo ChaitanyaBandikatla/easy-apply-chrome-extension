@@ -7,10 +7,15 @@ import org.hibernate.criterion.Restrictions;
 import org.hibernate.cfg.Configuration;
 
 import java.util.Optional;
+
+/**
+ * Implementation of custom user repository
+ */
 @org.springframework.context.annotation.Configuration
 public class UserRepositoryCustomImpl implements UserRepositoryCustom {
 
     private static SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+
     /**
      * Finds a user entity with matching user name
      * @param userName

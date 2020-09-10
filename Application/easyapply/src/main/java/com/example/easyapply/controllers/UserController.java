@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Date;
 import java.util.Optional;
 
+/**
+ * Controller which deals with user operations
+ */
 @RestController
 public class UserController {
     @Autowired

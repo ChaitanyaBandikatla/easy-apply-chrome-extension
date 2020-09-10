@@ -23,6 +23,7 @@ public class JobProfileDetailsEntity {
 
     @Id
     @Column(name = "job_profile_id")
+    @GeneratedValue
     public int getJobProfileId() {
         return jobProfileId;
     }
@@ -132,7 +133,7 @@ public class JobProfileDetailsEntity {
     }
 
     @Basic
-    @Column(name = "created_on")
+    @Column(name = "created_on", insertable = false)
     public Timestamp getCreatedOn() {
         return createdOn;
     }
