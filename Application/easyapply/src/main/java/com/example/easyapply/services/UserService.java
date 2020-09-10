@@ -9,6 +9,7 @@ import org.springframework.lang.NonNull;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.Optional;
 
 
@@ -27,7 +28,7 @@ public class UserService {
         if (user != null) {
             UserDetailsEntity userDetailsEntity = new UserDetailsEntity();
             userDetailsEntity.setEmail(user.getEmail());
-            userDetailsEntity.setUsername(user.getUsername());
+            userDetailsEntity.setUsername(user.getUsername().toLowerCase());
             userDetailsEntity.setPassword(encoder.encode(user.getPassword()));
             try {
                 userDetailsEntity = userRepository.save(userDetailsEntity);
@@ -55,6 +56,24 @@ public class UserService {
             userModel.setUserId(userDetailsEntity.get().getUserId());
             userModel.setLastLogin(userDetailsEntity.get().getLastLogin());
             return Optional.of(userModel);
+        }
+
+        return Optional.ofNullable(null);
+    }
+
+    /**
+     * Checks if user credentials are valid and returns user id, if valid
+     * @param userModel
+     * @return
+     */
+    public Optional<Integer> loginUser(UserModel userModel){
+        Optional<UserDetailsEntity> userDetailsEntity =
+                userRepository.findUserByUserName(userModel.getUsername().toLowerCase());
+
+        if(userDetailsEntity.isPresent()){
+            if (encoder.matches(userModel.getPassword(), userDetailsEntity.get().getPassword())) {
+                return Optional.ofNullable(userDetailsEntity.get().getUserId());
+            }
         }
 
         return Optional.ofNullable(null);

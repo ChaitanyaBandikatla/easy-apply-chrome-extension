@@ -26,12 +26,7 @@ public class UserController {
     @RequestMapping(value = "/user")
     public ResponseEntity<Response> createUser(@RequestBody UserModel userModel) {
         Optional<Integer> userId = userService.createUser(userModel);
-        if(userId.isPresent()){
-            userModel.setUserId(userId.get());
-            return new ResponseEntity<Response>(new Response(HttpStatus.OK, userModel), HttpStatus.OK);
-        }
-
-        return new ResponseEntity<Response>(new Response(HttpStatus.BAD_REQUEST, "Creation of user failed"), HttpStatus.OK);
+        return getResponseResponseEntity(userModel, userId);
     }
 
     /**
@@ -48,5 +43,31 @@ public class UserController {
 
         ApplicationLogger.getInstance().logTrace("User not found");
         return new ResponseEntity<Response>(new Response(HttpStatus.BAD_REQUEST, "User not found"), HttpStatus.OK);
+    }
+
+    /**
+     * Login user
+     * @param userModel
+     * @return
+     */
+    @RequestMapping(value = "/user/login")
+    public ResponseEntity<Response> loginUser(@RequestBody UserModel userModel) {
+        Optional<Integer> userId = userService.loginUser(userModel);
+        return getResponseResponseEntity(userModel, userId);
+    }
+
+    /**
+     * Returns response for login and create API calls
+     * @param userModel
+     * @param userId
+     * @return
+     */
+    private ResponseEntity<Response> getResponseResponseEntity(@RequestBody UserModel userModel, Optional<Integer> userId) {
+        if(userId.isPresent()){
+            userModel.setUserId(userId.get());
+            return new ResponseEntity<Response>(new Response(HttpStatus.OK, userModel), HttpStatus.OK);
+        }
+
+        return new ResponseEntity<Response>(new Response(HttpStatus.BAD_REQUEST, "Creation of user failed"), HttpStatus.OK);
     }
 }

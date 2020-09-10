@@ -3,5 +3,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.example.easyapply.entities.UserDetailsEntity;
 
 
-public interface UserRepository extends JpaRepository<UserDetailsEntity, Integer>{
+public interface UserRepository extends JpaRepository<UserDetailsEntity, Integer>, UserRepositoryCustom {
 }

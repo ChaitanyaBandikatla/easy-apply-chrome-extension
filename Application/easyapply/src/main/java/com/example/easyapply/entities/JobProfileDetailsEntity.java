@@ -19,6 +19,7 @@ public class JobProfileDetailsEntity {
     private String website;
     private String informationSource;
     private Timestamp createdOn;
+    private Integer userId;
 
     @Id
     @Column(name = "job_profile_id")
@@ -162,5 +163,15 @@ public class JobProfileDetailsEntity {
     @Override
     public int hashCode() {
         return Objects.hash(jobProfileId, jobProfileName, jobType, firstName, lastName, email, phone, linkedinProfile, githubProfile, website, informationSource, createdOn);
+    }
+
+    @Basic
+    @Column(name = "user_id")
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 }
