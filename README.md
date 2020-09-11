@@ -1,3 +1,3 @@
 # Easy Apply 
 
-[![Watch the video](https://github.com/ChaitanyaBandikatla/easy-apply-chrome-extension/blob/master/Video_thumbnail.png)](https://github.com/ChaitanyaBandikatla/easy-apply-chrome-extension/blob/master/seng20-Project1-Advertisement.mp4)
+[![Watch the video](https://github.com/ChaitanyaBandikatla/easy-apply-chrome-extension/blob/master/Resources/Video_thumbnail.png)](https://youtu.be/IRP6AflOPCg)
