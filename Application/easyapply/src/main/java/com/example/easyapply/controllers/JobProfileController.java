@@ -53,9 +53,9 @@ public class JobProfileController {
         return new ResponseEntity<Response>(new Response(HttpStatus.BAD_REQUEST, "Job Profile not found"), HttpStatus.OK);
     }
 
-    @RequestMapping("/jobProfile/edit/{profile_id}")
-    public ResponseEntity<Response> updateJobProfile(@RequestBody JobProfileModel jobProfileModel,@PathVariable("profile_id") int profileId){
-        Optional<Integer> jobProfileId = jobProfileService.updateJobProfile(jobProfileModel,profileId);
+    @RequestMapping("/jobProfile/edit/")
+    public ResponseEntity<Response> updateJobProfile(@RequestBody JobProfileModel jobProfileModel){
+        Optional<Integer> jobProfileId = jobProfileService.updateJobProfile(jobProfileModel);
         if(jobProfileId.isPresent()){
             return new ResponseEntity<Response>(new Response(HttpStatus.OK, jobProfileId), HttpStatus.OK);
         }

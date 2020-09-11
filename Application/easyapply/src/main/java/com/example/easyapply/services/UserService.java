@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 import javax.persistence.criteria.CriteriaBuilder;
 import java.util.Optional;
 
-
 @Service
 public class UserService {
     @Autowired
