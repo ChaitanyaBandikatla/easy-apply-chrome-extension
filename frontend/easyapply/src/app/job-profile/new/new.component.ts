@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new',
@@ -8,21 +9,23 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 })
 export class NewComponent {
   //jobProfileForm: FormGroup;
-
-  constructor(private formbuilder: FormBuilder) { }
+  constructor(private formbuilder: FormBuilder, private router: Router) { 
+  }
 
   jobProfileForm = this.formbuilder.group({
-      jobProfileName: new FormControl('', Validators.required),
-      firstname: new FormControl('', Validators.required),
+      jobProfileName: new FormControl(''),
+      firstname: new FormControl(''),
       middlename: new FormControl(''),
-      lastname: new FormControl('', Validators.required),
-      email: new FormControl('', Validators.required),
-      phone: new FormControl('', Validators.required),
+      lastname: new FormControl(''),
+      email: new FormControl(''),
+      phone: new FormControl(''),
       linkedinProfile: new FormControl(''),
       website: new FormControl(''),
     });
 
   onSubmit() {
     console.log(this.jobProfileForm.value);
+    this.router.navigateByUrl('home');
+    //TO DO: perform Create action 
   }
 }
