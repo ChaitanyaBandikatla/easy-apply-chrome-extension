@@ -11,9 +11,8 @@ export class RegisterComponent {
   constructor(private formbuilder: FormBuilder) { }
 
   registerForm = this.formbuilder.group({
-    'firstname': new FormControl('', Validators.required),
-    'middlename': new FormControl('', Validators.required),
-    'lastname': new FormControl('', Validators.required),
+    'firstName': new FormControl('', Validators.required),
+    'lastName': new FormControl('', Validators.required),
     'username': new FormControl('', Validators.required),
     'email': new FormControl('', [Validators.required, Validators.email]),
     'password': new FormControl('', [Validators.required, Validators.minLength(6)]),

@@ -4,20 +4,14 @@
         <mat-form-field
             [hideRequiredMarker]="registerForm.value.hideRequired"
             [floatLabel]="registerForm.value.floatLabel">
-            <input matInput placeholder="First Name" [(ngModel)]="registerForm.value.firstname" required #required="ngModel">
+            <input matInput placeholder="First Name" [(ngModel)]="registerForm.value.firstName" required #required="ngModel">
             <mat-hint *ngIf="!required.valid">Please enter First Name</mat-hint>>
         </mat-form-field>
         <br>
         <mat-form-field
             [hideRequiredMarker]="registerForm.value.hideRequired"
             [floatLabel]="registerForm.value.floatLabel">
-            <input matInput placeholder="Middle Name" [(ngModel)]="registerForm.value.middlename">
-        </mat-form-field>
-        <br>
-        <mat-form-field
-            [hideRequiredMarker]="registerForm.value.hideRequired"
-            [floatLabel]="registerForm.value.floatLabel">
-            <input matInput placeholder="Last Name" [(ngModel)]="registerForm.value.lastname" required #required="ngModel">
+            <input matInput placeholder="Last Name" [(ngModel)]="registerForm.value.lastName" required #required="ngModel">
             <mat-hint *ngIf="!required.valid">Please enter Last Name</mat-hint>>
         </mat-form-field>
         <br>
