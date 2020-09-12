@@ -2,9 +2,9 @@ package com.example.easyapply.services;
 
 import com.example.easyapply.entities.JobProfileDetailsEntity;
 import com.example.easyapply.models.JobProfileModel;
-import com.example.easyapply.models.UserModel;
 import com.example.easyapply.repositories.JobProfileRepository;
 import com.example.easyapply.utilities.ApplicationLogger;
+import com.example.easyapply.utilities.Utilities;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
@@ -29,19 +29,7 @@ public class JobProfileService {
      */
     public Optional<Integer> createJobProfile(@NonNull JobProfileModel jobProfileModel){
         if(jobProfileModel != null){
-            JobProfileDetailsEntity jobProfileDetailsEntity = new JobProfileDetailsEntity();
-            jobProfileDetailsEntity.setEmail(jobProfileModel.getEmail());
-            jobProfileDetailsEntity.setPhone(jobProfileModel.getPhone());
-            jobProfileDetailsEntity.setFirstName(jobProfileModel.getFirstName());
-            jobProfileDetailsEntity.setLastName(jobProfileModel.getLastName());
-            jobProfileDetailsEntity.setGithubProfile(jobProfileModel.getGithubProfile());
-            jobProfileDetailsEntity.setLinkedinProfile(jobProfileModel.getLinkedinProfile());
-            jobProfileDetailsEntity.setWebsite(jobProfileModel.getWebsite());
-            jobProfileDetailsEntity.setInformationSource(jobProfileModel.getInformationString());
-            jobProfileDetailsEntity.setUserId(jobProfileModel.getUserId());
-            jobProfileDetailsEntity.setJobProfileName(jobProfileModel.getJobProfileName());
-            jobProfileDetailsEntity.setJobType(jobProfileModel.getJobType());
-
+            JobProfileDetailsEntity jobProfileDetailsEntity = createJobProfileDetailsEntity(jobProfileModel);
             try {
                 jobProfileDetailsEntity = jobProfileRepository.save(jobProfileDetailsEntity);
                 return Optional.ofNullable(jobProfileDetailsEntity.getJobProfileId());
@@ -87,27 +75,19 @@ public class JobProfileService {
      * @param jobProfileModel, jobId
      * @return
      */
-    public Optional<Integer> updateJobProfile(@NonNull JobProfileModel jobProfileModel,int jobId){
-        if(jobProfileModel != null){
-            JobProfileDetailsEntity jobProfileDetailsEntity = new JobProfileDetailsEntity();
-            jobProfileDetailsEntity.setJobProfileId(jobId);
-            jobProfileDetailsEntity.setEmail(jobProfileModel.getEmail());
-            jobProfileDetailsEntity.setPhone(jobProfileModel.getPhone());
-            jobProfileDetailsEntity.setFirstName(jobProfileModel.getFirstName());
-            jobProfileDetailsEntity.setLastName(jobProfileModel.getLastName());
-            jobProfileDetailsEntity.setGithubProfile(jobProfileModel.getGithubProfile());
-            jobProfileDetailsEntity.setLinkedinProfile(jobProfileModel.getLinkedinProfile());
-            jobProfileDetailsEntity.setWebsite(jobProfileModel.getWebsite());
-            jobProfileDetailsEntity.setInformationSource(jobProfileModel.getInformationString());
-            jobProfileDetailsEntity.setUserId(jobProfileModel.getUserId());
-            jobProfileDetailsEntity.setJobProfileName(jobProfileModel.getJobProfileName());
-            jobProfileDetailsEntity.setJobType(jobProfileModel.getJobType());
+    public Optional<Integer> updateJobProfile(@NonNull JobProfileModel jobProfileModel){
+        if (jobProfileModel != null) {
+            Optional<JobProfileDetailsEntity> jobProfileDetailsEntity =
+                    jobProfileRepository.findById(jobProfileModel.getJobProfileId());
 
-            try {
-                jobProfileDetailsEntity = jobProfileRepository.save(jobProfileDetailsEntity);
-                return Optional.ofNullable(jobProfileDetailsEntity.getJobProfileId());
-            } catch (Exception ex) {
-                ApplicationLogger.getInstance().logException(ex);
+            if (jobProfileDetailsEntity.isPresent()) {
+                Utilities.copyNonNullProperties(createJobProfileDetailsEntity(jobProfileModel), jobProfileDetailsEntity.get());
+                try {
+                    jobProfileRepository.save(jobProfileDetailsEntity.get());
+                    return Optional.ofNullable(jobProfileDetailsEntity.get().getJobProfileId());
+                } catch (Exception ex) {
+                    ApplicationLogger.getInstance().logException(ex);
+                }
             }
         }
 
@@ -119,10 +99,10 @@ public class JobProfileService {
      * @param userId
      * @return
      */
-    public List<JobProfileModel> getJobProfiles(int userId){
+    public List<JobProfileModel> getJobProfiles(int userId) {
         List<JobProfileDetailsEntity> jobProfilesByUserId = jobProfileRepository.findJobProfileByUserId(userId);
         List<JobProfileModel> jobProfilesList = new ArrayList<>();
-        for(JobProfileDetailsEntity jobProfileByUserId: jobProfilesByUserId) {
+        for (JobProfileDetailsEntity jobProfileByUserId : jobProfilesByUserId) {
             JobProfileModel jobProfileModel = new JobProfileModel();
             jobProfileModel.setJobProfileId(jobProfileByUserId.getJobProfileId());
             jobProfileModel.setUserId(jobProfileByUserId.getUserId());
@@ -139,5 +119,28 @@ public class JobProfileService {
             jobProfilesList.add(jobProfileModel);
         }
         return jobProfilesList;
+    }
+
+    /*
+     * Create a job profile details entity for a given job profile model
+     * @param jobProfileModel
+     * @return
+     */
+    private JobProfileDetailsEntity createJobProfileDetailsEntity(@NonNull JobProfileModel jobProfileModel){
+        JobProfileDetailsEntity jobProfileDetailsEntity = new JobProfileDetailsEntity();
+        jobProfileDetailsEntity.setEmail(jobProfileModel.getEmail());
+        jobProfileDetailsEntity.setPhone(jobProfileModel.getPhone());
+        jobProfileDetailsEntity.setFirstName(jobProfileModel.getFirstName());
+        jobProfileDetailsEntity.setLastName(jobProfileModel.getLastName());
+        jobProfileDetailsEntity.setGithubProfile(jobProfileModel.getGithubProfile());
+        jobProfileDetailsEntity.setLinkedinProfile(jobProfileModel.getLinkedinProfile());
+        jobProfileDetailsEntity.setWebsite(jobProfileModel.getWebsite());
+        jobProfileDetailsEntity.setInformationSource(jobProfileModel.getInformationString());
+        jobProfileDetailsEntity.setUserId(jobProfileModel.getUserId());
+        jobProfileDetailsEntity.setJobProfileName(jobProfileModel.getJobProfileName());
+        jobProfileDetailsEntity.setJobType(jobProfileModel.getJobType());
+        jobProfileDetailsEntity.setJobProfileId(jobProfileModel.getJobProfileId());
+
+        return jobProfileDetailsEntity;
     }
 }

@@ -134,6 +134,7 @@ public class JobProfileDetailsEntity {
 
     @Basic
     @Column(name = "created_on", insertable = false)
+    @GeneratedValue
     public Timestamp getCreatedOn() {
         return createdOn;
     }
