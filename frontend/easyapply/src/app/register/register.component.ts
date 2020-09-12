@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { GlobalConstants } from '../global-constants';
 
 @Component({
   selector: 'app-register',
@@ -8,7 +10,7 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 })
 export class RegisterComponent {
   //registerForm: FormGroup;
-  constructor(private formbuilder: FormBuilder) { }
+  constructor(private formbuilder: FormBuilder, private http: HttpClient) { }
 
   registerForm = this.formbuilder.group({
     'firstName': new FormControl('', Validators.required),
@@ -25,6 +27,9 @@ export class RegisterComponent {
   }
 
   onSubmit() {
-    console.log(this.registerForm.value);
+    // console.log(this.registerForm.value);
+    this.http.post(GlobalConstants.backendURL + "/user", this.registerForm).subscribe(responseData => {
+      console.log(responseData);
+    });
   }
 }
