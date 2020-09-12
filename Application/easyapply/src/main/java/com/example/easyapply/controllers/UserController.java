@@ -1,6 +1,7 @@
 package com.example.easyapply.controllers;
 
 import com.example.easyapply.entities.UserDetailsEntity;
+import com.example.easyapply.models.JobProfileModel;
 import com.example.easyapply.models.Response;
 import com.example.easyapply.models.UserModel;
 import com.example.easyapply.services.UserService;

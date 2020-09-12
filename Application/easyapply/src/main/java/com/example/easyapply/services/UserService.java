@@ -66,11 +66,11 @@ public class UserService {
      * @param userModel
      * @return
      */
-    public Optional<Integer> loginUser(UserModel userModel){
+    public Optional<Integer> loginUser(UserModel userModel) {
         Optional<UserDetailsEntity> userDetailsEntity =
                 userRepository.findUserByUserName(userModel.getUsername().toLowerCase());
 
-        if(userDetailsEntity.isPresent()){
+        if (userDetailsEntity.isPresent()) {
             if (encoder.matches(userModel.getPassword(), userDetailsEntity.get().getPassword())) {
                 return Optional.ofNullable(userDetailsEntity.get().getUserId());
             }

@@ -1,7 +1,6 @@
 package com.example.easyapply.services;
 
 import com.example.easyapply.entities.JobProfileDetailsEntity;
-import com.example.easyapply.entities.UserDetailsEntity;
 import com.example.easyapply.models.JobProfileModel;
 import com.example.easyapply.models.UserModel;
 import com.example.easyapply.repositories.JobProfileRepository;
@@ -10,7 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Optional;
+import java.util.List;
 
 /**
  * Service layer for job profile flows
@@ -111,5 +112,32 @@ public class JobProfileService {
         }
 
         return Optional.ofNullable(null);
+    }
+
+    /**
+     * Returns jobprofile models with matching user id
+     * @param userId
+     * @return
+     */
+    public List<JobProfileModel> getJobProfiles(int userId){
+        List<JobProfileDetailsEntity> jobProfilesByUserId = jobProfileRepository.findJobProfileByUserId(userId);
+        List<JobProfileModel> jobProfilesList = new ArrayList<>();
+        for(JobProfileDetailsEntity jobProfileByUserId: jobProfilesByUserId) {
+            JobProfileModel jobProfileModel = new JobProfileModel();
+            jobProfileModel.setJobProfileId(jobProfileByUserId.getJobProfileId());
+            jobProfileModel.setUserId(jobProfileByUserId.getUserId());
+            jobProfileModel.setJobProfileName(jobProfileByUserId.getJobProfileName());
+            jobProfileModel.setJobType(jobProfileByUserId.getJobType());
+            jobProfileModel.setFirstName(jobProfileByUserId.getFirstName());
+            jobProfileModel.setLastName(jobProfileByUserId.getLastName());
+            jobProfileModel.setPhone(jobProfileByUserId.getPhone());
+            jobProfileModel.setLinkedinProfile(jobProfileByUserId.getLinkedinProfile());
+            jobProfileModel.setGithubProfile(jobProfileByUserId.getGithubProfile());
+            jobProfileModel.setEmail(jobProfileByUserId.getEmail());
+            jobProfileModel.setWebsite(jobProfileByUserId.getWebsite());
+            jobProfileModel.setInformationString(jobProfileByUserId.getInformationSource());
+            jobProfilesList.add(jobProfileModel);
+        }
+        return jobProfilesList;
     }
 }
