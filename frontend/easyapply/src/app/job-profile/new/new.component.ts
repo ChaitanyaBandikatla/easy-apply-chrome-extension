@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -9,7 +10,10 @@ import { Router } from '@angular/router';
 })
 export class NewComponent {
   //jobProfileForm: FormGroup;
-  constructor(private formbuilder: FormBuilder, private router: Router) { 
+  constructor(
+    private formbuilder: FormBuilder, 
+    private router: Router,
+    private http: HttpClient) { 
   }
 
   jobProfileForm = this.formbuilder.group({
@@ -24,8 +28,10 @@ export class NewComponent {
     });
 
   onSubmit() {
-    console.log(this.jobProfileForm.value);
+    // console.log(this.jobProfileForm.value);
     this.router.navigateByUrl('home');
-    //TO DO: perform Create action 
+    this.http.post('localhost:8080/jobProfile', this.jobProfileForm).subscribe(responseData => {
+      console.log(responseData);
+    });
   }
 }
