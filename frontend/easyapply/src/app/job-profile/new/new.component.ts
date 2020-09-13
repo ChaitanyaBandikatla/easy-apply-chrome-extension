@@ -30,7 +30,7 @@ export class NewComponent {
   onSubmit() {
     // console.log(this.jobProfileForm.value);
     this.router.navigateByUrl('home');
-    this.http.post('localhost:8080/jobProfile', this.jobProfileForm).subscribe(responseData => {
+    this.http.post('http://localhost:8080/jobProfile', this.jobProfileForm).subscribe(responseData => {
       console.log(responseData);
     });
   }
