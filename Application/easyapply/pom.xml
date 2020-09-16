@@ -85,9 +85,9 @@
 				<groupId>com.cosium.code</groupId>
 			</plugin>
 			<plugin>
-				<groupId>com.cosium.code</groupId>
-				<artifactId>maven-git-code-format</artifactId>
-				<version>1.39</version>
+   				<groupId>com.cosium.code</groupId>
+  			        <artifactId>maven-git-code-format</artifactId>
+   				<version>1.39</version>
 			</plugin>
 		</plugins>
 	</build>
