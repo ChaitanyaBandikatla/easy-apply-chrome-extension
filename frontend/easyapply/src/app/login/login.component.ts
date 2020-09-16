@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-login',
@@ -11,16 +12,17 @@ export class LoginComponent {
   hide = true;
   username = new FormControl(''); 
   password = new FormControl(''); 
-  onSubmit() {  
-    this.username.setValue('sonoojaiswal@javatpoint.com');  
-  }
   options: FormGroup;
 
-  constructor(fb: FormBuilder) {
+  constructor(fb: FormBuilder, private _router: Router) {
     this.options = fb.group({
       hideRequired: false,
       floatLabel: 'auto',
     });
+  }
+
+  onSubmit() : void {  
+    this._router.navigate(['/dashboard'])  
   }
 
 }

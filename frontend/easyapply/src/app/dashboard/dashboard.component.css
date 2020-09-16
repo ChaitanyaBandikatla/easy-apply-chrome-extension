@@ -1,0 +1,47 @@
+.card {
+        position: absolute;
+        height: 200px;
+        width: 300px;
+        margin: 20px;
+}
+
+.card-content {
+    margin: 20px;
+}
+
+.card-font {
+    font: 40px Arial;
+  }
+ .buttons{
+    vertical-align: bottom;
+    display: table-cell;
+    margin-top: 30px;
+    margin-left: 30px;
+ }
+.centered {
+    position: absolute; /* or absolute */
+    top: 20%;
+    left: 30%;
+    width: 30rem;
+  }
+  .example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+  
+  .example-container form {
+    margin-bottom: 20px;
+  }
+  
+  .example-container form > * {
+    margin: 5px 0;
+  }
+  
+  .example-container .mat-radio-button {
+    margin: 0 5px;
+  }
+  
