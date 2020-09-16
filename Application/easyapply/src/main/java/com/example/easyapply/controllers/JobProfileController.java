@@ -60,7 +60,7 @@ public class JobProfileController {
                 HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/user/{user_id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/userJobProfile/{user_id}", method = RequestMethod.GET)
     public ResponseEntity<Response> getJobProfiles(@PathVariable("user_id") int userId){
         System.out.println("getting profiles!!!\n");
         List<JobProfileModel> jobProfilesList = jobProfileService.getJobProfiles(userId);
