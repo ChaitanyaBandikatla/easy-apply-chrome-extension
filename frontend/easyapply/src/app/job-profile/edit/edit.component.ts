@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { GlobalConstants } from 'src/app/global-constants';
 
 @Component({
   selector: 'app-edit',
@@ -38,7 +39,7 @@ export class EditComponent implements OnInit {
       this.jobProfileId = params['id'];
     });
 
-    this.http.get<any>('http://localhost:8080/jobProfile/' + this.jobProfileId).subscribe(responseData => {
+    this.http.get<any>(GlobalConstants.backendURL + '/jobProfile/' + this.jobProfileId).subscribe(responseData => {
       // console.log(responseData);
       this.jobProfileForm = responseData.response;
     });

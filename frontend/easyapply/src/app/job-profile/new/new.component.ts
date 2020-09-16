@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import { GlobalConstants } from 'src/app/global-constants';
 
 @Component({
   selector: 'app-new',
@@ -30,7 +31,7 @@ export class NewComponent {
   onSubmit() {
     // console.log(this.jobProfileForm.value);
     this.router.navigateByUrl('home');
-    this.http.post('http://localhost:8080/jobProfile', this.jobProfileForm).subscribe(responseData => {
+    this.http.post(GlobalConstants.backendURL + '/jobProfile', this.jobProfileForm).subscribe(responseData => {
       console.log(responseData);
     });
   }
