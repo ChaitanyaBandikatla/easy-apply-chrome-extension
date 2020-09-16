@@ -16,6 +16,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { JobProfileModule } from './job-profile/job-profile.module';
 import { JobProfileRoutingModule } from './job-profile/job-profile-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { GlobalConstants } from './global-constants';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     MatSelectModule,
     JobProfileModule,
-    HttpClientModule
+    HttpClientModule,
+    // GlobalConstants
   ],
   providers: [],
   bootstrap: [AppComponent]

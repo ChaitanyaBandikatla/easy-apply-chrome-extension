@@ -22,20 +22,20 @@ export class EditComponent implements OnInit {
   jobProfileId = 0;
   jobProfileForm = this.formbuilder.group({
       id: new FormControl(this.jobProfileId),
-      jobProfileName: new FormControl('', Validators.required),
-      firstname: new FormControl('', Validators.required),
+      jobProfileName: new FormControl(''),
+      firstname: new FormControl(''),
       middlename: new FormControl(''),
-      lastname: new FormControl('', Validators.required),
-      email: new FormControl('', Validators.required),
-      phone: new FormControl('', Validators.required),
+      lastname: new FormControl(''),
+      email: new FormControl(''),
+      phone: new FormControl(''),
       linkedinProfile: new FormControl(''),
       website: new FormControl(''),
   });
 
   ngOnInit(): void {
     this.routeSub = this.route.params.subscribe(params => {
-      console.log(params) //log the entire params object
-      console.log(params['id']) //log the value of id
+      // console.log(params) //log the entire params object
+      // console.log(params['id']) //log the value of id
       this.jobProfileId = params['id'];
     });
 

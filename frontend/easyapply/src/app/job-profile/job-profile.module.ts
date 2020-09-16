@@ -29,7 +29,7 @@ import { GlobalConstants } from '../global-constants';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    GlobalConstants
+    // GlobalConstants
   ]
 })
 export class JobProfileModule { }
