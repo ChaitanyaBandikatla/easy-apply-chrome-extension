@@ -12,11 +12,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms'; 
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { ProfileComponent } from './profile/profile.component';
 import { JobProfileModule } from './job-profile/job-profile.module';
 import { JobProfileRoutingModule } from './job-profile/job-profile-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { GlobalConstants } from './global-constants';
 
 @NgModule({
   declarations: [
@@ -24,6 +28,9 @@ import { GlobalConstants } from './global-constants';
     LoginComponent,
     HomeComponent,
     RegisterComponent,
+    DashboardComponent,
+    NavbarComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +47,8 @@ import { GlobalConstants } from './global-constants';
     MatInputModule,
     FormsModule,
     MatSelectModule,
+    MatToolbarModule,
+    MatGridListModule,
     JobProfileModule,
     HttpClientModule,
     // GlobalConstants
