@@ -28,4 +28,20 @@
 ||Docs: 3 minute video, posted to YouTube. That convinces people why they want to work on your code.||
 || (hard) code conforms to some known patterns |
 
+|Tools Matter| Use of version control tools||
+|| Extensive use of version control tools ||
+|| Repo has an up-to-date requirements.txt file||
+|| Repo does not have "ignore" files.||
+||Use of  style checkers ||
+||Extensive Use of  style checkers ||
+|| Use of code  formatters. ||
+|| Extensive Use of code  formatters. ||
+|| Use of syntax checkers. ||
+|| Extensive use of syntax checkers. ||
+|| Use of code coverage ||
+|| Extensive use of code coverage ||
+|| other automated analysis tools||
+|| Extensive use of  other automated analysis tools||
+|| test cases exist||
+|| test cases are routinely executed||
 
