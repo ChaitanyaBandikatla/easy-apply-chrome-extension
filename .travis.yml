@@ -2,4 +2,4 @@ language: java
 jdk: oraclejdk11
  
 script:
-- ./Application/mvnw clean install -B
+- ./Application/easyapply/mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
