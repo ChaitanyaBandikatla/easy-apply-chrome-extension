@@ -1,4 +1,4 @@
-before_script: cd Application
+before_script: cd Application/easyapply
 language: java
 jdk: oraclejdk11
 
