@@ -1,5 +1,3 @@
+before_script: cd Application
 language: java
 jdk: oraclejdk11
- 
-script:
-- ./Application/easyapply/mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
