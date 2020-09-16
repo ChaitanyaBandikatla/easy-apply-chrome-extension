@@ -62,9 +62,8 @@ public class JobProfileController {
 
     @RequestMapping(value = "/userJobProfile/{user_id}", method = RequestMethod.GET)
     public ResponseEntity<Response> getJobProfiles(@PathVariable("user_id") int userId){
-        System.out.println("getting profiles!!!\n");
         List<JobProfileModel> jobProfilesList = jobProfileService.getJobProfiles(userId);
-        if (jobProfilesList.isEmpty()) {
+        if (!jobProfilesList.isEmpty()) {
             return new ResponseEntity<Response>(new Response(HttpStatus.OK, jobProfilesList), HttpStatus.OK);
         }
 
