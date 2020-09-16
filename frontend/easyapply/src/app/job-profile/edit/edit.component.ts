@@ -38,10 +38,9 @@ export class EditComponent implements OnInit {
       this.jobProfileId = params['id'];
     });
 
-    this.http.get('http://localhost:8080/jobProfile/' + this.jobProfileId).subscribe(responseData => {
-      console.log("FORM GET RESPONSE----");
-      console.log(responseData);
-      // this.jobProfileForm = responseData;
+    this.http.get<any>('http://localhost:8080/jobProfile/' + this.jobProfileId).subscribe(responseData => {
+      // console.log(responseData);
+      this.jobProfileForm = responseData.response;
     });
   }
 
