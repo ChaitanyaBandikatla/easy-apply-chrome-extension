@@ -45,3 +45,17 @@
 || test cases exist||
 || test cases are routinely executed||
 
+| Consensus-oriented model| the files CONTRIBUTING.md and CODEOFCONDUCT.md has have multiple edits by multiple people||
+| | the files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up||
+| | multiple people contribute to discussions||
+|| issues are discussed before they are closed||
+|| Chat channel: exists||
+|| Chat channel: is active ||
+|| test cases:.a large proportion of the issues related to handling failing cases.||
+| Zero internal boundaries | evidence that the whole team is using the same tools: everyone can get to all tools and files||
+| | evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)||
+| | evidence that the whole team is using the same tools (e.g. tutor can ask anyone to share screen, they demonstrate the system running on their computer)||
+| | evidence that the members of the team are working across multiple places in the code base||
+| Low-regressions rule | (hard to judge) features released are not subsequently removed||
+|Short release cycles | (hard to see in short projects) project members are committing often enough so that everyone can get your work||
+
