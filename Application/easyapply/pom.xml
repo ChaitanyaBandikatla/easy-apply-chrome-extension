@@ -85,9 +85,20 @@
 				<groupId>com.cosium.code</groupId>
 			</plugin>
 			<plugin>
-   				<groupId>com.cosium.code</groupId>
-  			        <artifactId>maven-git-code-format</artifactId>
-   				<version>1.39</version>
+				<groupId>com.cosium.code</groupId>
+				<artifactId>git-code-format-maven-plugin</artifactId>
+				<version>${git-code-format-maven-plugin.version}</version>
+				<executions>
+					<!-- ... -->
+				</executions>
+				<configuration>
+					<googleJavaFormatOptions>
+						<aosp>false</aosp>
+						<fixImportsOnly>false</fixImportsOnly>
+						<skipSortingImports>false</skipSortingImports>
+						<skipRemovingUnusedImports>false</skipRemovingUnusedImports>
+					</googleJavaFormatOptions>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
