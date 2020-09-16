@@ -15,17 +15,10 @@ export class EditComponent implements OnInit {
     private formbuilder: FormBuilder, 
     private router: Router, 
     private http: HttpClient,
-    private route: ActivatedRoute) { 
-  }
-  jobProfileId = 0;
-  ngOnInit(): void {
-    this.routeSub = this.route.params.subscribe(params => {
-      console.log(params) //log the entire params object
-      console.log(params['id']) //log the value of id
-      this.jobProfileId = params['id'];
-    });
+    private route: ActivatedRoute) {
   }
 
+  jobProfileId = 0;
   jobProfileForm = this.formbuilder.group({
       id: new FormControl(this.jobProfileId),
       jobProfileName: new FormControl('', Validators.required),
@@ -38,6 +31,20 @@ export class EditComponent implements OnInit {
       website: new FormControl(''),
   });
 
+  ngOnInit(): void {
+    this.routeSub = this.route.params.subscribe(params => {
+      console.log(params) //log the entire params object
+      console.log(params['id']) //log the value of id
+      this.jobProfileId = params['id'];
+    });
+
+    this.http.get('http://localhost:8080/jobProfile/' + this.jobProfileId).subscribe(responseData => {
+      console.log("FORM GET RESPONSE----");
+      console.log(responseData);
+      // this.jobProfileForm = responseData;
+    });
+  }
+
   ngOnDestroy() { //prevent memory leaks
     this.routeSub.unsubscribe();
   }
@@ -46,7 +53,7 @@ export class EditComponent implements OnInit {
     // console.log(this.jobProfileForm.value);
     this.http.patch("http://localhost:8080/jobProfile/edit", this.jobProfileForm).subscribe(responseData => {
       console.log(responseData);
-    })
+    });
     this.router.navigateByUrl('home');
     //TO DO: perform Update action
   }
