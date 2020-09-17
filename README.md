@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.com/ChaitanyaBandikatla/easy-apply-chrome-extension.svg?branch=master)](https://travis-ci.com/ChaitanyaBandikatla/easy-apply-chrome-extension) [![DOI](https://zenodo.org/badge/293367899.svg)](https://zenodo.org/badge/latestdoi/293367899)  ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/ChaitanyaBandikatla/easy-apply-chrome-extension?logoColor=green)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ChaitanyaBandikatla/easy-apply-chrome-extension/issues)
+[![HitCount](http://hits.dwyl.com/easy-apply-chrome-extension/https://githubcom/ChaitanyaBandikatla/easy-apply-chrome-extension.svg)](http://hits.dwyl.com/easy-apply-chrome-extension/https://githubcom/ChaitanyaBandikatla/easy-apply-chrome-extension)
 
 
 [![Watch the video](https://github.com/ChaitanyaBandikatla/easy-apply-chrome-extension/blob/master/Resources/Video_thumbnail.png)](https://youtu.be/IRP6AflOPCg)
@@ -66,4 +67,5 @@
 
 Prettier : https://github.com/prettier/prettier
 Contirbuting Badge : https://github.com/dwyl/repo-badges
+Hit Count : https://github.com/dwyl/repo-badges
 
