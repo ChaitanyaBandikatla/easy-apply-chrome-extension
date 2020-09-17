@@ -15,6 +15,9 @@
 
 [![Watch the video](https://github.com/ChaitanyaBandikatla/easy-apply-chrome-extension/blob/master/Resources/Video_thumbnail.png)](https://youtu.be/IRP6AflOPCg)
 
+## Auto Code Formatter Used :
+
+Prettier java : ttps://github.com/jhipster/prettier-java License : [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 
 ## References :
