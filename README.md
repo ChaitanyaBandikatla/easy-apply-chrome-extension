@@ -68,9 +68,9 @@
 
 ## References :
 
-Prettier : https://github.com/prettier/prettier. 
-Contirbuting Badge : https://github.com/dwyl/repo-badges. 
-Hit Count : https://github.com/dwyl/repo-badges. 
-License Badge : https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba. 
-Why Badge :  https://github.com/dwyl/repo-badges. 
+Prettier : https://github.com/prettier/prettier\
+Contirbuting Badge : https://github.com/dwyl/repo-badges\
+Hit Count : https://github.com/dwyl/repo-badges\
+License Badge : https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba\
+Why Badge :  https://github.com/dwyl/repo-badges\
 
