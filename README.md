@@ -6,7 +6,7 @@
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ChaitanyaBandikatla/easy-apply-chrome-extension/issues)
 [![HitCount](http://hits.dwyl.com/easy-apply-chrome-extension/https://githubcom/ChaitanyaBandikatla/easy-apply-chrome-extension.svg)](http://hits.dwyl.com/easy-apply-chrome-extension/https://githubcom/ChaitanyaBandikatla/easy-apply-chrome-extension)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Forks](https://img.shields.io/github/forks/ChaitanyaBandikatla/easy-apply-chrome-extension?style=social)
+[![Code of Conduct](https://img.shields.io/badge/code-of%20conduct-green.svg)]()
 
 
 
