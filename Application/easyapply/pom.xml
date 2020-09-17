@@ -82,7 +82,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<groupId>com.cosium.code</groupId>
 			</plugin>
 			<plugin>
 				<groupId>com.hubspot.maven.plugins</groupId>
