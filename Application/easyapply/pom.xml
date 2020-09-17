@@ -85,7 +85,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
-				       <!-- Reference : https://github.com/jhipster/prettier-java -->
+				<!-- Reference : https://github.com/jhipster/prettier-java -->
 				<groupId>com.hubspot.maven.plugins</groupId>
 				<artifactId>prettier-maven-plugin</artifactId>
 				<version>0.8</version>
@@ -101,6 +101,26 @@
 						<phase>validate</phase>
 						<goals>
 							<goal>${plugin.prettier.goal}</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<!-- Reference : https://github.com/codecov/example-java -->
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.6</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
 						</goals>
 					</execution>
 				</executions>
