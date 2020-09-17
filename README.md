@@ -5,7 +5,7 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ChaitanyaBandikatla/easy-apply-chrome-extension/issues)
 [![HitCount](http://hits.dwyl.com/easy-apply-chrome-extension/https://githubcom/ChaitanyaBandikatla/easy-apply-chrome-extension.svg)](http://hits.dwyl.com/easy-apply-chrome-extension/https://githubcom/ChaitanyaBandikatla/easy-apply-chrome-extension)
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 
@@ -71,4 +71,6 @@
 Prettier : https://github.com/prettier/prettier
 Contirbuting Badge : https://github.com/dwyl/repo-badges
 Hit Count : https://github.com/dwyl/repo-badges
+License Badge : https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+Why Badge :  https://github.com/dwyl/repo-badges
 
