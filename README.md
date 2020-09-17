@@ -62,7 +62,7 @@
 |Short release cycles | (hard to see in short projects) project members are committing often enough so that everyone can get your work||
 
 
-References :
+## References :
 
 Prettier : https://github.com/prettier/prettier
 Contirbuting Badge : https://github.com/dwyl/repo-badges
