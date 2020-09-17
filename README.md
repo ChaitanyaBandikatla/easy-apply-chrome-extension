@@ -7,6 +7,8 @@
 [![HitCount](http://hits.dwyl.com/easy-apply-chrome-extension/https://githubcom/ChaitanyaBandikatla/easy-apply-chrome-extension.svg)](http://hits.dwyl.com/easy-apply-chrome-extension/https://githubcom/ChaitanyaBandikatla/easy-apply-chrome-extension)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code of Conduct](https://img.shields.io/badge/code-of%20conduct-green.svg)]()
+[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ChaitanyaBandikatla/easy-apply-chrome-extension)
+
 
 
 
@@ -22,4 +24,6 @@ Contirbuting Badge : https://github.com/dwyl/repo-badges  License: No License <b
 Hit Count : https://github.com/dwyl/repo-badges. License: No License <br />
 License Badge : https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba  License: No License<br />
 Why Badge :  https://github.com/dwyl/repo-badges License: No License<br />
+Open Source Basge : https://github.com/Naereen/badges  License : [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<br />
 
