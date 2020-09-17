@@ -16,6 +16,7 @@
 
 	<properties>
 		<java.version>11</java.version>
+		<plugin.prettier.goal>write</plugin.prettier.goal>
 	</properties>
 
 	<dependencies>
@@ -82,6 +83,26 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>com.hubspot.maven.plugins</groupId>
+				<artifactId>prettier-maven-plugin</artifactId>
+				<version>0.8</version>
+				<configuration>
+					<printWidth>90</printWidth>
+					<tabWidth>2</tabWidth>
+					<useTabs>false</useTabs>
+					<ignoreConfigFile>true</ignoreConfigFile>
+					<ignoreEditorConfig>true</ignoreEditorConfig>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<goals>
+							<goal>${plugin.prettier.goal}</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
