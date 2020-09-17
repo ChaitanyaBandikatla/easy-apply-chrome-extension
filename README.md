@@ -60,3 +60,9 @@
 | Low-regressions rule | (hard to judge) features released are not subsequently removed||
 |Short release cycles | (hard to see in short projects) project members are committing often enough so that everyone can get your work||
 
+
+References :
+
+Prettier : https://github.com/prettier/prettier
+
+
