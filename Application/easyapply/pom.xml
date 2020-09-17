@@ -85,20 +85,10 @@
 				<groupId>com.cosium.code</groupId>
 			</plugin>
 			<plugin>
-				<groupId>com.cosium.code</groupId>
-				<artifactId>git-code-format-maven-plugin</artifactId>
-				<version>${git-code-format-maven-plugin.version}</version>
-				<executions>
-					<!-- ... -->
-				</executions>
-				<configuration>
-					<googleJavaFormatOptions>
-						<aosp>false</aosp>
-						<fixImportsOnly>false</fixImportsOnly>
-						<skipSortingImports>false</skipSortingImports>
-						<skipRemovingUnusedImports>false</skipRemovingUnusedImports>
-					</googleJavaFormatOptions>
-				</configuration>
+				<groupId>com.hubspot.maven.plugins</groupId>
+				<artifactId>prettier-maven-plugin</artifactId>
+				<!-- Find the latest version at https://github.com/jhipster/prettier-java/releases -->
+				<version>0.8</version>
 			</plugin>
 		</plugins>
 	</build>
