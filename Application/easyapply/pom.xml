@@ -16,6 +16,7 @@
 
 	<properties>
 		<java.version>11</java.version>
+		<plugin.prettier.goal>write</plugin.prettier.goal>
 	</properties>
 
 	<dependencies>
