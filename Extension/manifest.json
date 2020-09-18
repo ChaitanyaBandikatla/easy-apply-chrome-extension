@@ -5,14 +5,21 @@
   "description": "Chrome Extension for filling up job applications",
   "version": "1.0",
 
+  "background" : {
+    "scripts" : ["./background.js"]
+  },
+
+  "options_page": "./options.html",
+
   "browser_action": {
     "default_icon": "favicon.png",
-    "default_popup": "popup.html",
-	"default_title": "Click here!"
+	  "default_title": "Easy Apply!"
   },
     
   "permissions": [
-    "activeTab",
+    "storage",
+    "tabs",
     "http://*/*","https://*/*"
   ]
 }
+
