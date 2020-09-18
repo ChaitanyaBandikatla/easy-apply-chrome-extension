@@ -22,6 +22,10 @@ Prettier java : https://github.com/jhipster/prettier-java License : [![License](
 
 Codecov and Jacoco: https://github.com/codecov/example-java. License: Eclipse Public License 1.0
 
+## Syntax Checker used:
+
+Maven : https://github.com/apache/maven/blob/master/LICENSE License: [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 
 ## References :
 
