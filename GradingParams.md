@@ -6,7 +6,7 @@
 || group meetings had a moderator that managed the round robin|
 || group meeting moderator rotated among  the group|
 || code conforms to some packaging standard|
-|| code has can be downloaded from some standard package manager|
+|| code can be downloaded from some standard package manager|
 | |workload is spread over the whole team (one team member is often Xtimes more productive than the others... but nevertheless, here is a track record that everyone is contributing a lot)||
 || Number of commits||
 || Number of commits: by different people||
@@ -26,15 +26,10 @@
 || Repo has an up-to-date requirements.txt file||
 || Repo does not have "ignore" files.||
 ||Use of  style checkers ||
-||Extensive Use of  style checkers ||
 || Use of code  formatters. ||
-|| Extensive Use of code  formatters. ||
 || Use of syntax checkers. ||
-|| Extensive use of syntax checkers. ||
 || Use of code coverage ||
-|| Extensive use of code coverage ||
-|| other automated analysis tools||
-|| Extensive use of  other automated analysis tools||
+|| Other automated analysis tools||
 || test cases exist||
 || test cases are routinely executed||
 ||||
