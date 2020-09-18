@@ -22,6 +22,10 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    public UserController(UserService userService){
+        this.userService = userService;
+    }
+
     /**
      * Creates user for given user model
      * @param userModel
@@ -45,7 +49,6 @@ public class UserController {
             return new ResponseEntity<Response>(new Response(HttpStatus.OK, userModel), HttpStatus.OK);
         }
 
-        ApplicationLogger.getInstance().logTrace("User not found");
         return new ResponseEntity<Response>(new Response(HttpStatus.BAD_REQUEST, "User not found"), HttpStatus.OK);
     }
 

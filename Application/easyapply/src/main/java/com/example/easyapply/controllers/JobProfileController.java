@@ -21,6 +21,10 @@ public class JobProfileController {
     @Autowired
     private JobProfileService jobProfileService;
 
+    public JobProfileController(JobProfileService jobProfileService){
+        this.jobProfileService = jobProfileService;
+    }
+
     /**
      * Create a job profile id
      * @param jobProfileModel
@@ -45,7 +49,6 @@ public class JobProfileController {
             return new ResponseEntity<Response>(new Response(HttpStatus.OK, jobProfileModel), HttpStatus.OK);
         }
 
-        ApplicationLogger.getInstance().logTrace("Job Profile not found");
         return new ResponseEntity<Response>(new Response(HttpStatus.BAD_REQUEST, "Job Profile not found"), HttpStatus.OK);
     }
 

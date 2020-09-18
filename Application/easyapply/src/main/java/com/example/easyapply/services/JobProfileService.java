@@ -22,6 +22,10 @@ public class JobProfileService {
     @Autowired
     private JobProfileRepository jobProfileRepository;
 
+    public JobProfileService(JobProfileRepository jobProfileRepository){
+        this.jobProfileRepository = jobProfileRepository;
+    }
+
     /**
      * Creates a job profile for a given DTO
      * @param jobProfileModel

@@ -18,6 +18,10 @@ public class UserService {
     private UserRepository userRepository;
     private BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
+    public UserService(UserRepository userRepository){
+        this.userRepository = userRepository;
+    }
+
     /**
      * Create user for the given user model
      * @param user
@@ -33,7 +37,7 @@ public class UserService {
                 userDetailsEntity = userRepository.save(userDetailsEntity);
                 return Optional.ofNullable(userDetailsEntity.getUserId());
             } catch (Exception ex) {
-                ApplicationLogger.getInstance().logException(ex);
+                System.out.println(ex.getMessage());
             }
         }
 
