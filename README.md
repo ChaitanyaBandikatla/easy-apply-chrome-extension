@@ -14,9 +14,13 @@
 
 [![Watch the video](https://github.com/ChaitanyaBandikatla/easy-apply-chrome-extension/blob/master/Resources/Video_thumbnail.png)](https://youtu.be/IRP6AflOPCg)
 
-## Auto Code Formatter Used :
+## Auto Code Formatter used :
 
-Prettier java : ttps://github.com/jhipster/prettier-java License : [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+Prettier java : https://github.com/jhipster/prettier-java License : [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+## Code coverage tool used:
+
+Codecov and Jacoco: https://github.com/codecov/example-java. License: Eclipse Public License 1.0
 
 
 ## References :
