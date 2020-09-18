@@ -21,17 +21,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { JobProfileModule } from './job-profile/job-profile.module';
 import { JobProfileRoutingModule } from './job-profile/job-profile-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule, Routes } from '@angular/router';
 import { UserprofileService } from './services/userprofile.service';
-
-const routes: Routes = [
-  {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent},
-  {path: 'home', component: HomeComponent},
-  {path: 'dashboard', component: DashboardComponent},
-  {path: 'profile', component: ProfileComponent},
-  { path: '', redirectTo: 'home', pathMatch: 'full' }
-];
 
 @NgModule({
   declarations: [
@@ -61,7 +51,8 @@ const routes: Routes = [
     MatToolbarModule,
     MatGridListModule,
     JobProfileModule,
-    HttpClientModule
+    HttpClientModule,
+    // GlobalConstants
   ],
   providers: [ UserprofileService ],
   bootstrap: [AppComponent]
