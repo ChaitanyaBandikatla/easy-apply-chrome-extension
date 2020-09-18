@@ -4,6 +4,9 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
 
+/**
+Entity for storing JobProfile details in the persistent storage like Heroku Database, etc
+*/
 @Entity
 @Table(name = "job_profile_details", schema = "public", catalog = "d9egl5hpouila3")
 public class JobProfileDetailsEntity {
