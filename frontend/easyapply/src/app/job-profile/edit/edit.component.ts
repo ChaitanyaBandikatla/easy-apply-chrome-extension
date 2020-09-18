@@ -12,6 +12,7 @@ import { GlobalConstants } from 'src/app/global-constants';
 })
 export class EditComponent implements OnInit {
   private routeSub: Subscription;
+
   constructor(
     private formbuilder: FormBuilder, 
     private router: Router, 
@@ -51,7 +52,7 @@ export class EditComponent implements OnInit {
 
   onSubmit() {
     // console.log(this.jobProfileForm.value);
-    this.http.patch("http://localhost:8080/jobProfile/edit", this.jobProfileForm).subscribe(responseData => {
+    this.http.patch(GlobalConstants.backendURL + "/jobProfile/edit", this.jobProfileForm).subscribe(responseData => {
       console.log(responseData);
     });
     this.router.navigateByUrl('home');
