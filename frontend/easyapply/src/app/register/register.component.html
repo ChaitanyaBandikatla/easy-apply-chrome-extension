@@ -1,0 +1,43 @@
+<mat-card class="centered">
+    <h1>Register</h1>
+    <div class="example-container">
+        <mat-form-field
+            [hideRequiredMarker]="registerForm.value.hideRequired"
+            [floatLabel]="registerForm.value.floatLabel">
+            <input matInput placeholder="First Name" [(ngModel)]="registerForm.value.firstName" required #required="ngModel">
+            <mat-hint *ngIf="!required.valid">Please enter First Name</mat-hint>>
+        </mat-form-field>
+        <br>
+        <mat-form-field
+            [hideRequiredMarker]="registerForm.value.hideRequired"
+            [floatLabel]="registerForm.value.floatLabel">
+            <input matInput placeholder="Last Name" [(ngModel)]="registerForm.value.lastName" required #required="ngModel">
+            <mat-hint *ngIf="!required.valid">Please enter Last Name</mat-hint>>
+        </mat-form-field>
+        <br>
+        <mat-form-field
+            [hideRequiredMarker]="registerForm.value.hideRequired"
+            [floatLabel]="registerForm.value.floatLabel">
+            <input matInput placeholder="Username" [(ngModel)]="registerForm.value.username" required #required="ngModel">
+            <mat-hint *ngIf="!required.valid">Please enter username Name</mat-hint>>
+        </mat-form-field>
+        <br>
+        <mat-form-field
+            [hideRequiredMarker]="registerForm.value.hideRequired"
+            [floatLabel]="registerForm.value.floatLabel">
+            <input matInput placeholder="Email ID" [(ngModel)]="registerForm.value.email" required email #email="ngModel">
+            <mat-hint *ngIf="!email.valid">Please enter a valid email id</mat-hint>>
+        </mat-form-field>
+        <br>
+        <mat-form-field
+            [hideRequiredMarker]="registerForm.value.hideRequired"
+            [floatLabel]="registerForm.value.floatLabel">
+            <input matInput placeholder="Password" [(ngModel)]="registerForm.value.password" required type='password' #required="ngModel">
+            <mat-hint *ngIf="!required.valid">Please enter Job Profile Name</mat-hint>>
+            <mat-hint align="end">At least 6 characters long</mat-hint>
+        </mat-form-field>
+        <div class="form-group">
+            <button mat-raised-button color="primary" (click)="onSubmit()">Register</button>  
+        </div> 
+    </div>  
+</mat-card>
