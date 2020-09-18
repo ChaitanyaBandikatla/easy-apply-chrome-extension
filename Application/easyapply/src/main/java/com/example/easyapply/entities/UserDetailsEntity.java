@@ -6,6 +6,9 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
 
+/**
+Entity for storing user details in persistent storage
+*/
 @Entity
 @Table(name = "user_details", schema = "public", catalog = "d9egl5hpouila3")
 public class UserDetailsEntity {
