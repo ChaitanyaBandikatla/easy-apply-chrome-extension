@@ -37,7 +37,12 @@ public class JobProfileController {
         return new ResponseEntity<Response>(new Response(HttpStatus.BAD_REQUEST, "Creation of job Profile failed"),
                 HttpStatus.OK);
     }
-
+    
+    /**
+     * Get a job profile model with a profileId
+     * @param profileId
+     * @return
+     */
     @RequestMapping("/jobProfile/{profile_id}")
     public ResponseEntity<Response> getJobProfile(@PathVariable("profile_id") int profileId){
         Optional<JobProfileModel> jobProfileModel = jobProfileService.getJobProfile(profileId);
@@ -48,7 +53,12 @@ public class JobProfileController {
         ApplicationLogger.getInstance().logTrace("Job Profile not found");
         return new ResponseEntity<Response>(new Response(HttpStatus.BAD_REQUEST, "Job Profile not found"), HttpStatus.OK);
     }
-
+    
+    /**
+     * Update job profile details
+     * @param jobProfileModel
+     * @return
+     */
     @RequestMapping("/jobProfile/edit/")
     public ResponseEntity<Response> updateJobProfile(@RequestBody JobProfileModel jobProfileModel){
         Optional<Integer> jobProfileId = jobProfileService.updateJobProfile(jobProfileModel);
@@ -60,6 +70,11 @@ public class JobProfileController {
                 HttpStatus.OK);
     }
 
+    /**
+     * Return a list of job profile model associated with userId
+     * @param userId
+     * @return
+     */
     @RequestMapping(value = "/userJobProfile/{user_id}", method = RequestMethod.GET)
     public ResponseEntity<Response> getJobProfiles(@PathVariable("user_id") int userId){
         List<JobProfileModel> jobProfilesList = jobProfileService.getJobProfiles(userId);
