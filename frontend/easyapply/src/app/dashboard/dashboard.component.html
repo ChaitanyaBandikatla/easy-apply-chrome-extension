@@ -1,7 +1,7 @@
-<mat-card class="card">
+<ul *ngFor="let profile of profiles; index as i;" class = "mat-card card">
     <div class="example-container">
         <div style="overflow: auto; margin:20px">
-            <h1 class="card-font">SDE Profile</h1>
+            <h1 class="card-font">{{profile.jobProfileName}}</h1>
         </div><br>
         <div class="buttons">
             <button mat-raised-button color="primary" style="margin: 5px">View</button>
@@ -9,4 +9,4 @@
             <button mat-raised-button color="warn" style="margin: 5px">Delete</button>
         </div>      
     </div>
-</mat-card>
+</ul>

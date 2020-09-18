@@ -21,7 +21,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { JobProfileModule } from './job-profile/job-profile.module';
 import { JobProfileRoutingModule } from './job-profile/job-profile-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule, Routes } from '@angular/router'
+import { RouterModule, Routes } from '@angular/router';
+import { UserprofileService } from './services/userprofile.service';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -62,7 +63,7 @@ const routes: Routes = [
     JobProfileModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ UserprofileService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
