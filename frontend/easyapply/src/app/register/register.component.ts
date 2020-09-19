@@ -17,18 +17,14 @@ export class RegisterComponent {
     private router: Router) { }
 
   registerForm = this.formbuilder.group({
-    'firstName': new FormControl('', Validators.required),
-    'lastName': new FormControl('', Validators.required),
-    'username': new FormControl('', Validators.required),
-    'email': new FormControl('', [Validators.required, Validators.email]),
-    'password': new FormControl('', [Validators.required, Validators.minLength(6)]),
+    'firstName': new FormControl(''),
+    'lastName': new FormControl(''),
+    'username': new FormControl(''),
+    'email': new FormControl(''),
+    'password': new FormControl(''),
     hideRequired: false,
     floatLabel: 'auto',
   });
-
-  public registerFormErrors = (controlName: string, errorName: string) => {
-    return this.registerForm.controls[controlName].hasError(errorName);
-  }
 
   onSubmit() {
     // console.log(this.registerForm.value);
