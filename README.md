@@ -14,6 +14,25 @@
 
 [![Watch the video](https://github.com/ChaitanyaBandikatla/easy-apply-chrome-extension/blob/master/Resources/Video_thumbnail.png)](https://youtu.be/IRP6AflOPCg)
 
+## Why Easy Apply?
+
+For making the point of why anyone should use easy apply, we take an example of a real user with the name of John Doe who is a Male.
+
+John Doe is a student at a reputed university studying Computer Science and is doing exceptionally well in academics and has been working on a lot of research projects under various professors. All of the professors are quite happy with him and would write him stellar letters of recommendation if he decides to pursue research further ahead.
+
+John is in his senior year and has decided to move out from the research field since he wants to try something different. He decides to apply for jobs in the industry. Since he has worked in various fields in his time in college, he has the required knowledge in various fields like Software Engineering, Data Science, System Engineering and DevOps and some more. He decided to make different resumes for the different profiles he is interested in and he can't pick a favourite because he doesn't know how the fields are in the industry.
+
+He has no experience of applying to jobs before and has recently come to the knowledge that a typical senior applies close to 150-200 positions in the hiring season. He realises his effort has to be above average since he is not applying for a set profile. He just realizes that not only does he have to have different resumes for different profiles also the associated application information like why? and other questions have to be answered differently. 
+
+He so wishes for a tool so that as a user, he should be able to create personalised applications of different categories defined by him. He also wishes to be able to keep track of what roles he has applied to using the tool, so that it is easier for him to follow up on.
+
+Easy Apply addresses the major pain point of job applicants like John Doe who apply close to 200 applications per application season. Almost all the applications have a similar structure which requires the applicant to provide details pertaining to work experience, graduation requirements, etc in addition to personal information. Since there is a common structure in the applications, Easy Apply provides the details in the application on the applicant's behalf. This is similar to the auto-fill feature of the browser.
+
+Easy apply aims to solve this problem by providing a portal where users can provide their details for each job application type, mapped to a key. When the applicant proceeds to fill out the application on the company portal, the tools enable the applicant to select the details that must be provided for that specific job application using the tool which is in form of a chrome extension.
+
+It saves a lot of time for John in his job hunt and he can use the time saved more productively elsewhere and that's why you should use Easy Apply !!!
+
+
 ## Auto Code Formatter used :
 
 Prettier java : https://github.com/jhipster/prettier-java License : [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
