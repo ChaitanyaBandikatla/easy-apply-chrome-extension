@@ -3,6 +3,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { UserprofileService } from '../services/userprofile.service'
 import { Userprofiles } from '../services/userprofiles'
 import { Router } from '@angular/router';
+import { GlobalConstants } from '../global-constants';
 
 @Component({
   selector: 'app-dashboard',
@@ -16,24 +17,26 @@ export class DashboardComponent implements OnInit {
   constructor(private _userprofileservice:UserprofileService, private router: Router) { }
 
   ngOnInit(): void{
+    // console.log(GlobalConstants.userID);
     this._userprofileservice.getprofiles()
       .subscribe((data: Userprofiles[]) =>{
         this.profiles = data["response"];
         if (this.profiles == 'No Job Profiles') {
           this.profiles = []
         }
-        // console.log(this.profiles);
       });
   }
 
   onCreateJobProfile(){
-    //TODO: create new job profile
+    this.router.navigateByUrl('jobProfile/new');
   }
-  onEditJobProfile() {
-    //TODO: Route to the edit page of job profile
-    // this.router.navigateByUrl('');
+
+  onEditJobProfile(index) {//Edit and View are the same
+    console.log(index);
+    // this.router.navigateByUrl('jobProfile');
   }
-  onDeleteJobProfile() {
+
+  onDeleteJobProfile(index) {
     //TODO: Implement Delete Job Profile
   }
 }

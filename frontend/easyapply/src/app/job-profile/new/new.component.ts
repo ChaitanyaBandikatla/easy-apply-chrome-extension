@@ -19,20 +19,24 @@ export class NewComponent {
 
   jobProfileForm = this.formbuilder.group({
       jobProfileName: new FormControl(''),
-      firstname: new FormControl(''),
-      middlename: new FormControl(''),
-      lastname: new FormControl(''),
+      jobType: new FormControl(''),
+      firstName: new FormControl(''),
+      // middlename: new FormControl(''),
+      lastName: new FormControl(''),
       email: new FormControl(''),
       phone: new FormControl(''),
       linkedinProfile: new FormControl(''),
+      githubProfile: new FormControl(''),
       website: new FormControl(''),
+      informationSource: new FormControl(''),
+      userId: new FormControl(GlobalConstants.userID)
     });
 
   onSubmit() {
     // console.log(this.jobProfileForm.value);
-    this.router.navigateByUrl('home');
-    this.http.post(GlobalConstants.backendURL + '/jobProfile', this.jobProfileForm).subscribe(responseData => {
+    this.http.post(GlobalConstants.backendURL + '/jobProfile', this.jobProfileForm.value).subscribe(responseData => {
       console.log(responseData);
     });
+    this.router.navigateByUrl('dashboard');
   }
 }
