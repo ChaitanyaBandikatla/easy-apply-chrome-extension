@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormControl, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { GlobalConstants } from '../global-constants';
 
@@ -10,7 +10,6 @@ import { GlobalConstants } from '../global-constants';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-  //registerForm: FormGroup;
   constructor(
     private formbuilder: FormBuilder, 
     private http: HttpClient,  
@@ -22,14 +21,11 @@ export class RegisterComponent {
     'username': new FormControl(''),
     'email': new FormControl(''),
     'password': new FormControl(''),
-    hideRequired: false,
-    floatLabel: 'auto',
   });
 
   onSubmit() {
-    // console.log(this.registerForm.value);
     this.router.navigateByUrl('home');
-    this.http.post(GlobalConstants.backendURL + "/user", this.registerForm).subscribe(responseData => {
+    this.http.post<any>(GlobalConstants.backendURL + "/user", this.registerForm.value).subscribe(responseData => {
       console.log(responseData);
     });
   }
