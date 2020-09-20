@@ -32,6 +32,14 @@ Easy apply aims to solve this problem by providing a portal where users can prov
 
 It saves a lot of time for John in his job hunt and he can use the time saved more productively elsewhere and that's why you should use Easy Apply !!!
 
+## FAQ:
+How useful is it given that we have an option to login and provide details using LinkedIn?
+ - An important thing to note is, people usually customize resume, and application based on role (SWE and Data scientist roles ideally look for qualities in applicants), and it only makes sense to provide role specific details which we believe is not possible with LinkedIn.
+
+Application portals parse the doc and fill out automatically. How is this feature helping me?
+ - We understand most of the application portals have this feature, but personally, we faced a lot of issues when we used that feature due to inconsistent parsing (probably because the resume using Latex), but we believe you might’ve faced it too. Our extension on the other hand will be generic and just maps data against each field, which we believe would address the parsing issues.
+
+
 
 ## Auto Code Formatter used :
 
