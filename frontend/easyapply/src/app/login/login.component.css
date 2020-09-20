@@ -25,3 +25,7 @@
     margin: 0 5px;
   }
   
+  .login-failed {
+    font-size: medium;
+    color: red;
+  }

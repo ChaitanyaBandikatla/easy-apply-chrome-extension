@@ -4,16 +4,17 @@
         <mat-form-field
             [hideRequiredMarker]="options.value.hideRequired"
             [floatLabel]="options.value.floatLabel">
-            <input matInput placeholder="Username" required>
+            <input matInput placeholder="Username" [(ngModel)]="loginForm.value.username" required>
         </mat-form-field>
         <br>
         <mat-form-field
             [hideRequiredMarker]="options.value.hideRequired"
             [floatLabel]="options.value.floatLabel">
-            <input matInput placeholder="Password" required type='password'>
+            <input matInput placeholder="Password" [(ngModel)]="loginForm.value.password" required type='password'>
         </mat-form-field>
         <div class="form-group">  
             <button mat-raised-button color="primary" (click)="onSubmit()">Login</button>  
-        </div> 
+        </div>
+        <div class="login-failed" *ngIf="loginFailed">Login Failed! Please try again.</div>
     </div>  
 </mat-card>
