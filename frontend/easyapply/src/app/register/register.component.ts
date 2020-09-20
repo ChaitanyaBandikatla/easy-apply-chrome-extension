@@ -24,9 +24,9 @@ export class RegisterComponent {
   });
 
   onSubmit() {
-    this.router.navigateByUrl('home');
     this.http.post<any>(GlobalConstants.backendURL + "/user", this.registerForm.value).subscribe(responseData => {
       console.log(responseData);
     });
+    this.router.navigateByUrl('home');
   }
 }
