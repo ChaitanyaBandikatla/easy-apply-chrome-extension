@@ -1,12 +1,13 @@
+<button mat-raised-button (click)="onCreateJobProfile()">New Job Profile</button>
 <ul *ngFor="let profile of profiles; index as i;" class = "mat-card card">
     <div class="example-container">
         <div style="overflow: auto; margin:20px">
             <h1 class="card-font">{{profile.jobProfileName}}</h1>
         </div><br>
         <div class="buttons">
-            <button mat-raised-button color="primary" style="margin: 5px">View</button>
-            <button mat-raised-button color="primary" style="margin: 5px">Edit</button>
-            <button mat-raised-button color="warn" style="margin: 5px">Delete</button>
+            <!-- <button mat-raised-button color="primary" style="margin: 5px">View</button> -->
+            <button mat-raised-button color="primary" style="margin: 5px" (click) ="onEditJobProfile()">Edit</button>
+            <button mat-raised-button color="warn" style="margin: 5px" (click)="onDeleteJobProfile()">Delete</button>
         </div>      
     </div>
 </ul>

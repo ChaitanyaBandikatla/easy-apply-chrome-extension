@@ -3,6 +3,7 @@ import { Userprofiles } from './userprofiles';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
+import { GlobalConstants } from '../global-constants';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +12,6 @@ export class UserprofileService {
 
   constructor(private http:HttpClient) { }
 
-  private url: string = "https://easy-apply-seng20.herokuapp.com/userJobProfile/3";
-
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -20,7 +19,7 @@ export class UserprofileService {
   }
 
   public getprofiles() : Observable<Userprofiles[]>{
-    return this.http.get<Userprofiles[]>(this.url).pipe(
+    return this.http.get<Userprofiles[]>(GlobalConstants.backendURL + '/userJobProfile/' + GlobalConstants.userID).pipe(
       retry(1),
       catchError(this.errorHandl)
     );

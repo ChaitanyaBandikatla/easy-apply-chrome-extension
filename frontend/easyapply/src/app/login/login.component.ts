@@ -31,9 +31,9 @@ export class LoginComponent {
   onSubmit() : void {  
     // this._router.navigate(['/dashboard'])
     this.http.post<any>(GlobalConstants.backendURL + '/user/login', this.loginForm.value).subscribe(response => {
-      console.log(response);
+      // console.log(response.response.userId);
       if (response.httpStatus == 'OK') {
-        // GlobalConstants.userID = response.response.userId;
+        GlobalConstants.userID = response.response.userId;
         this.loginFailed = false;
         this._router.navigateByUrl('dashboard');
       } else {
