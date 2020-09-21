@@ -1,4 +1,10 @@
-<mat-card class= "example-card">
-
+<mat-card class="centered">
+    <h1>User Profile</h1>
+    <div class="example-container">
+        <h3>Username: </h3>
+        <p *ngIf="userProfile.username">{{userProfile.username}}</p>
+        <br>
+        <h3>Email: </h3>
+        <p *ngIf="userProfile.email">{{userProfile.email}}</p>
+    </div>  
 </mat-card>
-  

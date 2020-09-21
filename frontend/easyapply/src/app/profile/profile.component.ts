@@ -1,6 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { GlobalConstants } from '../global-constants';
 
-
+/* User profile component */
 
 @Component({
   selector: 'app-profile',
@@ -9,7 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 
 
-export class ProfileComponent {
+export class ProfileComponent implements OnInit {
+  private userProfile;
 
+  constructor (
+    private http: HttpClient) {}
 
+  ngOnInit(): void {
+    this.http.get<any>(GlobalConstants.backendURL + '/user/' + GlobalConstants.userID).subscribe(responseData => {
+      console.log(responseData);
+      this.userProfile = responseData.response;
+      console.log("userProfile...", this.userProfile);
+    });
+  }
+  
 }

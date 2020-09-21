@@ -1,8 +1,8 @@
 <mat-toolbar color="primary" class="navbar">
     <div>EasyApply</div>
     <div>
-        <span [routerLink]="['dashboard']">Dashboard</span>
-        <span [routerLink]="['profile']">Profile</span>
-        <span [routerLink]="['home']">Logout</span>
+        <span *ngIf="isLoggedin" [routerLink]="['dashboard']">Dashboard</span>
+        <span *ngIf="isLoggedin" [routerLink]="['profile']">Profile</span>
+        <span *ngIf="isLoggedin" (click)="onLogout()">Logout</span>
     </div>
 </mat-toolbar>

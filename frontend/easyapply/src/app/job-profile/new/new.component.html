@@ -11,20 +11,21 @@
         <mat-form-field
             [hideRequiredMarker]="jobProfileForm.value.hideRequired"
             [floatLabel]="jobProfileForm.value.floatLabel">
-            <input matInput placeholder="First Name" [(ngModel)]="jobProfileForm.value.firstname" required #required="ngModel">
+            <input matInput placeholder="Job Type" [(ngModel)]="jobProfileForm.value.jobType" required #required="ngModel">
+            <mat-hint *ngIf="!required.valid">Please enter Job Type</mat-hint>
+        </mat-form-field>
+        <br>
+        <mat-form-field
+            [hideRequiredMarker]="jobProfileForm.value.hideRequired"
+            [floatLabel]="jobProfileForm.value.floatLabel">
+            <input matInput placeholder="First Name" [(ngModel)]="jobProfileForm.value.firstName" required #required="ngModel">
             <mat-hint *ngIf="!required.valid">Please enter First Name</mat-hint>
         </mat-form-field>
         <br>
         <mat-form-field
             [hideRequiredMarker]="jobProfileForm.value.hideRequired"
             [floatLabel]="jobProfileForm.value.floatLabel">
-            <input matInput placeholder="Middle Name" [(ngModel)]="jobProfileForm.value.middlename">
-        </mat-form-field>
-        <br>
-        <mat-form-field
-            [hideRequiredMarker]="jobProfileForm.value.hideRequired"
-            [floatLabel]="jobProfileForm.value.floatLabel">
-            <input matInput placeholder="Last Name" [(ngModel)]="jobProfileForm.value.lastname" required #required="ngModel">
+            <input matInput placeholder="Last Name" [(ngModel)]="jobProfileForm.value.lastName" required #required="ngModel">
             <mat-hint *ngIf="!required.valid">Please enter Last Name</mat-hint>
         </mat-form-field>
         <br>
@@ -48,8 +49,15 @@
         <mat-form-field
             [hideRequiredMarker]="jobProfileForm.value.hideRequired"
             [floatLabel]="jobProfileForm.value.floatLabel">
-            <input matInput placeholder="LinkedIn Profile" [(ngModel)]="jobProfileForm.value.linkedinProfile" pattern="https?://.+" #pattern="ngModel">
-            <mat-hint *ngIf="!pattern.valid">Please enter a valid LinkedinProfile</mat-hint>
+            <input matInput placeholder="LinkedIn Profile address" [(ngModel)]="jobProfileForm.value.linkedinProfile" pattern="https?://.+" #pattern="ngModel">
+            <mat-hint *ngIf="!pattern.valid">Please enter a valid Linkedin Profile address</mat-hint>
+        </mat-form-field>
+        <br>
+        <mat-form-field
+            [hideRequiredMarker]="jobProfileForm.value.hideRequired"
+            [floatLabel]="jobProfileForm.value.floatLabel">
+            <input matInput placeholder="GitHub Profile address" [(ngModel)]="jobProfileForm.value.githubProfile" pattern="https?://.+" #pattern="ngModel">
+            <mat-hint *ngIf="!pattern.valid">Please enter a valid GitHub Profile address</mat-hint>
         </mat-form-field>
         <br>
         <mat-form-field
@@ -57,6 +65,12 @@
             [floatLabel]="jobProfileForm.value.floatLabel">
             <input matInput placeholder="Website" [(ngModel)]="jobProfileForm.value.website" pattern="https?://.+" #pattern="ngModel">
             <mat-hint *ngIf="!pattern.valid">Please enter a valid Website address</mat-hint>
+        </mat-form-field>
+        <br>        
+        <mat-form-field
+            [hideRequiredMarker]="jobProfileForm.value.hideRequired"
+            [floatLabel]="jobProfileForm.value.floatLabel">
+            <input matInput placeholder="Information Source" [(ngModel)]="jobProfileForm.value.informationSource">
         </mat-form-field>
         <div class="form-group">  
             <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>  

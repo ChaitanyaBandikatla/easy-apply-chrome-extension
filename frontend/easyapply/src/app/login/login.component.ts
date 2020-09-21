@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
 import { FormBuilder,FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router'
+import { GlobalConstants } from '../global-constants';
+
+/* User Login handling component */
 
 @Component({
   selector: 'app-login',
@@ -8,21 +12,35 @@ import { Router } from '@angular/router'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-
   hide = true;
   username = new FormControl(''); 
   password = new FormControl(''); 
   options: FormGroup;
+  loginFailed = false;
 
-  constructor(fb: FormBuilder, private _router: Router) {
+  constructor(private fb: FormBuilder, private _router: Router, private http: HttpClient) {
     this.options = fb.group({
       hideRequired: false,
       floatLabel: 'auto',
     });
   }
 
-  onSubmit() : void {  
-    this._router.navigate(['/dashboard'])  
+  loginForm = this.fb.group({
+    'username': new FormControl(''),
+    'password': new FormControl('')
+  });
+
+  onSubmit() : void {
+    this.http.post<any>(GlobalConstants.backendURL + '/user/login', this.loginForm.value).subscribe(response => {
+      if (response.httpStatus == 'OK') {
+        GlobalConstants.userID = response.response.userId;
+        GlobalConstants.userisLoggedin = true;
+        this.loginFailed = false;
+        this._router.navigateByUrl('dashboard');
+      } else {
+        this.loginFailed = true;
+      }
+    });
   }
 
 }
