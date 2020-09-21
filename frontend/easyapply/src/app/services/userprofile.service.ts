@@ -20,6 +20,7 @@ export class UserprofileService {
     })
   }
 
+  // GET operation method for User Profiles
   public getprofiles() : Observable<Userprofiles[]>{
     return this.http.get<Userprofiles[]>(GlobalConstants.backendURL + '/userJobProfile/' + GlobalConstants.userID).pipe(
       retry(1),
@@ -27,6 +28,7 @@ export class UserprofileService {
     );
   }
 
+  // error handler
   errorHandl(error) {
     let errorMessage = '';
     if(error.error instanceof ErrorEvent) {

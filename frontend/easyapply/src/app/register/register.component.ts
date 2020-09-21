@@ -25,10 +25,12 @@ export class RegisterComponent {
     'password': new FormControl(''),
   });
 
+  // registration form submission handler
   onSubmit() {
     this.http.post<any>(GlobalConstants.backendURL + "/user", this.registerForm.value).subscribe(responseData => {
       console.log(responseData);
     });
+    // rerouting to home after registration/creation of user
     this.router.navigateByUrl('home');
   }
 }

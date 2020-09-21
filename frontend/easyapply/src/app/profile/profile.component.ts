@@ -14,15 +14,12 @@ import { GlobalConstants } from '../global-constants';
 export class ProfileComponent implements OnInit {
   private userProfile;
 
-  constructor (
-    private http: HttpClient) {}
+  constructor (private http: HttpClient) {}
 
   ngOnInit(): void {
+    // GET operation - fetching the present user details
     this.http.get<any>(GlobalConstants.backendURL + '/user/' + GlobalConstants.userID).subscribe(responseData => {
-      console.log(responseData);
       this.userProfile = responseData.response;
-      console.log("userProfile...", this.userProfile);
     });
   }
-  
 }

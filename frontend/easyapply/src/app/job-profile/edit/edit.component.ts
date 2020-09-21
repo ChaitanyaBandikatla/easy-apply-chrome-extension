@@ -25,7 +25,9 @@ export class EditComponent implements OnInit {
   jobProfileForm: FormGroup;
   jobProfileId = 0;
   
+  // initializing this component
   ngOnInit(): void {
+    // getting jobProfileId from params
     this.routeSub = this.route.params.subscribe(params => {
       this.jobProfileId = params['jobProfileId'];
     });
@@ -54,10 +56,13 @@ export class EditComponent implements OnInit {
     this.routeSub.unsubscribe();
   }
 
+  // edited form submission handler
   onSubmit() {
     this.http.patch(GlobalConstants.backendURL + "/jobProfile/edit/", this.jobProfileForm.value).subscribe(responseData => {
       console.log(responseData);
     });
+
+    // routing back to the dashboard page after editing
     this.router.navigateByUrl('dashboard');
   }
 }
