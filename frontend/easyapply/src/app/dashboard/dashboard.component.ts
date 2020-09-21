@@ -32,11 +32,12 @@ export class DashboardComponent implements OnInit {
     this.router.navigateByUrl('jobProfile/new');
   }
 
-  // job profile editing handler
-  onEditJobProfile(index) {//Edit and View are the same
+  /* Edit and View are the same. No need for separate View implementation */
+  // job profile deletion handler
+  onEditJobProfile(index) {
     this.router.navigateByUrl('jobProfile/' + this.profiles[index].jobProfileId + '/edit');
   }
-
+  
   // job profile deletion handler
   onDeleteJobProfile(index) {
     //TODO: Implement Delete Job Profile

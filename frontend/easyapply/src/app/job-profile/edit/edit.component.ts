@@ -51,8 +51,9 @@ export class EditComponent implements OnInit {
       this.jobProfileForm.value = responseData.response;
     });
   }
-
-  ngOnDestroy() { //prevent memory leaks
+  
+  //prevent memory leaks
+  ngOnDestroy() { 
     this.routeSub.unsubscribe();
   }
 
@@ -61,7 +62,6 @@ export class EditComponent implements OnInit {
     this.http.patch(GlobalConstants.backendURL + "/jobProfile/edit/", this.jobProfileForm.value).subscribe(responseData => {
       console.log(responseData);
     });
-
     // routing back to the dashboard page after editing
     this.router.navigateByUrl('dashboard');
   }

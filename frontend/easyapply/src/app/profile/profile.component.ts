@@ -13,7 +13,6 @@ import { GlobalConstants } from '../global-constants';
 
 export class ProfileComponent implements OnInit {
   private userProfile;
-
   constructor (private http: HttpClient) {}
 
   ngOnInit(): void {

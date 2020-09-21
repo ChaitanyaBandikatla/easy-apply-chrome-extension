@@ -13,6 +13,7 @@ import { GlobalConstants } from '../global-constants';
 })
 
 export class LoginComponent {
+  hide = true;
   username = new FormControl(''); 
   password = new FormControl(''); 
   options: FormGroup;
@@ -45,5 +46,5 @@ export class LoginComponent {
       }
     });
   }
-
+  
 }

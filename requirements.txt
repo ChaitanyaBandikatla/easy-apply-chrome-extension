@@ -1,1 +1,2 @@
-
+oraclejdk11
+npm --version=6.14.6
