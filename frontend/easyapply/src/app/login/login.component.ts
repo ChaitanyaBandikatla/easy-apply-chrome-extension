@@ -34,6 +34,7 @@ export class LoginComponent {
       // console.log(response.response.userId);
       if (response.httpStatus == 'OK') {
         GlobalConstants.userID = response.response.userId;
+        GlobalConstants.userisLoggedin = true;
         this.loginFailed = false;
         this._router.navigateByUrl('dashboard');
       } else {
