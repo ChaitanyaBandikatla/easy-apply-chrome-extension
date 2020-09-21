@@ -23,7 +23,7 @@
 ||||
 |Tools Matter| Use of version control tools|4
 || Extensive use of version control tools |4
-|| Repo has an up-to-date requirements.txt file|2
+|| Repo has an up-to-date requirements.txt file|3
 || Repo does not have "ignore" files.|4
 ||Use of  style checkers |4
 || Use of code  formatters. |4
