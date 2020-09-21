@@ -6,7 +6,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/59e7cb68569c1d682b5a/maintainability)](https://codeclimate.com/github/ChaitanyaBandikatla/easy-apply-chrome-extension/maintainability) [![codecov](https://codecov.io/gh/ChaitanyaBandikatla/easy-apply-chrome-extension/branch/master/graph/badge.svg)](https://codecov.io/gh/ChaitanyaBandikatla/easy-apply-chrome-extension)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ChaitanyaBandikatla/easy-apply-chrome-extension/issues)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Code of Conduct](https://img.shields.io/badge/code-of%20conduct-green.svg)]()
+[![Code of Conduct](https://img.shields.io/badge/code-of%20conduct-green.svg)](https://github.com/ChaitanyaBandikatla/easy-apply-chrome-extension/blob/akashsrikanth-Extension-yml/CODE_OF_CONDUCT.md)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ChaitanyaBandikatla/easy-apply-chrome-extension)
 
 
@@ -41,9 +41,11 @@ Application portals parse the doc and fill out automatically. How is this featur
 
 
 
-## Auto Code Formatter used :
+## Auto Code Formatter/Style Checker used :
 
 Prettier java : https://github.com/jhipster/prettier-java License : [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+Prettier :https://github.com/prettier/prettier License : [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
 
 ## Code coverage tool used:
 
@@ -53,6 +55,12 @@ Codecov and Jacoco: https://github.com/codecov/example-java. License: Eclipse Pu
 
 Maven : https://github.com/apache/maven/blob/master/LICENSE License: [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
+## Package Manager used :
+
+Maven : https://github.com/apache/maven/blob/master/LICENSE License: [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+Nodemon : https://github.com/remy/nodemon/ License :  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
+
 
 ## References :
 
@@ -61,6 +69,7 @@ Prettier : https://github.com/prettier/prettier License : [![License: MIT](https
 Contirbuting Badge : https://github.com/dwyl/repo-badges  License: No License <br />
 License Badge : https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba  License: No License<br />
 Why Badge :  https://github.com/dwyl/repo-badges License: No License<br />
-Open Source Basge : https://github.com/Naereen/badges  License : [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+Open Source Badge : https://github.com/Naereen/badges  License : [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <br />
-
+Nodemon : https://github.com/remy/nodemon/ License :  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)] <br />
+Extension Development : https://medium.com/swlh/create-a-email-password-login-system-for-your-chrome-extension-c36cff6d5e40  <br />

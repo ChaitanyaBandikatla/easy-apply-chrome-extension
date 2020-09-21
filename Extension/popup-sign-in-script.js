@@ -1,4 +1,6 @@
 //<Refernce Link: https://medium.com/swlh/create-a-email-password-login-system-for-your-chrome-extension-c36cff6d5e40>
+
+//Event listener to check on action taken for sing-in button
 document.querySelector('form').addEventListener('submit', event => {
     event.preventDefault();
 
