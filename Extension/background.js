@@ -2,6 +2,7 @@
 let user_signed_in = false;
 let return_session = false;
 
+//Function to check if the user is signed in yet or not. Arguments : None Return Type : Promise
 function is_user_signed_in() {
     return new Promise(resolve => {
         chrome.storage.local.get(['userStatus', 'user_info'],
@@ -17,6 +18,7 @@ function is_user_signed_in() {
     });
 }
 
+// Function to flip user between signin/signout status - Arguments : signIn boolean variable, user_info json content , Returns Promises resolving singin Status
 function flip_user_status(signIn, user_info) {
     if (signIn) {
         console.log(user_info.email)
@@ -78,6 +80,7 @@ is_user_signed_in().then(res => {
 })
 .catch(err => console.log(res));
     
+//Listner to check actions on button click
 chrome.browserAction.onClicked.addListener(function () {
         is_user_signed_in()
             .then(res => {
