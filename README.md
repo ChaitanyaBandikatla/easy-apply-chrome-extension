@@ -67,6 +67,6 @@ Prettier : https://github.com/prettier/prettier License : [![License: MIT](https
 Contirbuting Badge : https://github.com/dwyl/repo-badges  License: No License <br />
 License Badge : https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba  License: No License<br />
 Why Badge :  https://github.com/dwyl/repo-badges License: No License<br />
-Open Source Basge : https://github.com/Naereen/badges  License : [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+Open Source Badge : https://github.com/Naereen/badges  License : [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <br />
 Nodemon : https://github.com/remy/nodemon/ License :  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)] <br />
