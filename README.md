@@ -72,4 +72,4 @@ Why Badge :  https://github.com/dwyl/repo-badges License: No License<br />
 Open Source Badge : https://github.com/Naereen/badges  License : [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <br />
 Nodemon : https://github.com/remy/nodemon/ License :  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)] <br />
-Extension Development : https://medium.com/swlh/create-a-email-password-login-system-for-your-chrome-extension-c36cff6d5e40 <br />
+Extension Development : https://medium.com/swlh/create-a-email-password-login-system-for-your-chrome-extension-c36cff6d5e40 License : No License<br />
