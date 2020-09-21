@@ -11,6 +11,7 @@ import { GlobalConstants } from '../global-constants';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent {
   hide = true;
   username = new FormControl(''); 
@@ -30,17 +31,20 @@ export class LoginComponent {
     'password': new FormControl('')
   });
 
+  // login form submission handler
   onSubmit() : void {
     this.http.post<any>(GlobalConstants.backendURL + '/user/login', this.loginForm.value).subscribe(response => {
       if (response.httpStatus == 'OK') {
+        // updating the global constants state
         GlobalConstants.userID = response.response.userId;
         GlobalConstants.userisLoggedin = true;
         this.loginFailed = false;
+        // rerouting to dashboard of the user after successful login
         this._router.navigateByUrl('dashboard');
       } else {
         this.loginFailed = true;
       }
     });
   }
-
+  
 }

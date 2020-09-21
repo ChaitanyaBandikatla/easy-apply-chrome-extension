@@ -13,6 +13,7 @@ export class AppComponent implements OnInit{
   constructor(private router: Router) {}
 
   ngOnInit(): void {
+    // reroute to the login page
     this.router.navigateByUrl('login');
   }
 }

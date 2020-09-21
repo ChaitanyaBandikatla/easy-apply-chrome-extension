@@ -16,8 +16,8 @@ export class DashboardComponent implements OnInit {
 
   constructor(private _userprofileservice:UserprofileService, private router: Router) { }
 
-  ngOnInit(): void{
-    // console.log(GlobalConstants.userID);
+  // runs as initialization
+  ngOnInit(): void {
     this._userprofileservice.getprofiles()
       .subscribe((data: Userprofiles[]) =>{
         this.profiles = data["response"];
@@ -27,15 +27,18 @@ export class DashboardComponent implements OnInit {
       });
   }
 
+  // job profile creation handler
   onCreateJobProfile(){
     this.router.navigateByUrl('jobProfile/new');
   }
 
-  onEditJobProfile(index) {//Edit and View are the same
-    console.log(index + ", "  + this.profiles[index].jobProfileId);
+  /* Edit and View are the same. No need for separate View implementation */
+  // job profile deletion handler
+  onEditJobProfile(index) {
     this.router.navigateByUrl('jobProfile/' + this.profiles[index].jobProfileId + '/edit');
   }
-
+  
+  // job profile deletion handler
   onDeleteJobProfile(index) {
     //TODO: Implement Delete Job Profile
   }

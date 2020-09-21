@@ -19,24 +19,25 @@ export class NewComponent {
   }
 
   jobProfileForm = this.formbuilder.group({
-      jobProfileName: new FormControl(''),
-      jobType: new FormControl(''),
-      firstName: new FormControl(''),
-      lastName: new FormControl(''),
-      email: new FormControl(''),
-      phone: new FormControl(''),
-      linkedinProfile: new FormControl(''),
-      githubProfile: new FormControl(''),
-      website: new FormControl(''),
-      informationSource: new FormControl(''),
-      userId: new FormControl(GlobalConstants.userID)
-    });
+    jobProfileName: new FormControl(''),
+    jobType: new FormControl(''),
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    email: new FormControl(''),
+    phone: new FormControl(''),
+    linkedinProfile: new FormControl(''),
+    githubProfile: new FormControl(''),
+    website: new FormControl(''),
+    informationSource: new FormControl(''),
+    userId: new FormControl(GlobalConstants.userID)
+  });
 
+  // the new form submission handler
   onSubmit() {
-    // console.log(this.jobProfileForm.value);
     this.http.post(GlobalConstants.backendURL + '/jobProfile', this.jobProfileForm.value).subscribe(responseData => {
       console.log(responseData);
     });
+    // reroute to dashboard page after creation
     this.router.navigateByUrl('dashboard');
   }
 }
