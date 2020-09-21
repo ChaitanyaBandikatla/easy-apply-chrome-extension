@@ -61,6 +61,13 @@ Maven : https://github.com/apache/maven/blob/master/LICENSE License: [![License]
 
 Nodemon : https://github.com/remy/nodemon/ License :  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
 
+## Proposed experiment data :
+
+**Time of completion** : Users selected randomly can fill out 5-10 forms manually/other autofillers and the easy apply autofiller and compare average time taken to complete application.
+
+**Number of fields autofilled in application** : Users selected randomly can fill out 5-10 forms using other autofillers and the easy apply autofiller and compare the number of fields that can are autofilled by the extension.
+
+
 
 ## References :
 
