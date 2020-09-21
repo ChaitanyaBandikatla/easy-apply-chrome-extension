@@ -45,6 +45,8 @@ Application portals parse the doc and fill out automatically. How is this featur
 
 Prettier java : https://github.com/jhipster/prettier-java License : [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
+Prettier :https://github.com/prettier/prettier License : [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
+
 ## Code coverage tool used:
 
 Codecov and Jacoco: https://github.com/codecov/example-java. License: Eclipse Public License 1.0
