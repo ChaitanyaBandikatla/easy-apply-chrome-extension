@@ -1,8 +1,10 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormControl, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { GlobalConstants } from 'src/app/global-constants';
+
+/* Create a new Job Profile handling component */
 
 @Component({
   selector: 'app-new',
@@ -10,7 +12,6 @@ import { GlobalConstants } from 'src/app/global-constants';
   styleUrls: ['./new.component.css']
 })
 export class NewComponent {
-  //jobProfileForm: FormGroup;
   constructor(
     private formbuilder: FormBuilder, 
     private router: Router,

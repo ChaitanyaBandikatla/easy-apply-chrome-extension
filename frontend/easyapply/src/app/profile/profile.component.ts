@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { GlobalConstants } from '../global-constants';
 
+/* User profile component */
+
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',

@@ -1,8 +1,10 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder,FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router'
 import { GlobalConstants } from '../global-constants';
+
+/* User Login handling component */
 
 @Component({
   selector: 'app-login',
@@ -28,10 +30,8 @@ export class LoginComponent {
     'password': new FormControl('')
   });
 
-  onSubmit() : void {  
-    // this._router.navigate(['/dashboard'])
+  onSubmit() : void {
     this.http.post<any>(GlobalConstants.backendURL + '/user/login', this.loginForm.value).subscribe(response => {
-      // console.log(response.response.userId);
       if (response.httpStatus == 'OK') {
         GlobalConstants.userID = response.response.userId;
         GlobalConstants.userisLoggedin = true;

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GlobalConstants } from '../global-constants';
 
-/* Navigation bar for the user to select */
+/* Navigation bar component for the website */
 
 @Component({
   selector: 'app-navbar',

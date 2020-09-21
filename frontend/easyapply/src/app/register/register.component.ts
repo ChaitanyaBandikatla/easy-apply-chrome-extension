@@ -4,6 +4,8 @@ import { FormControl, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { GlobalConstants } from '../global-constants';
 
+/* User registration (create new) component */
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',

@@ -1,9 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { GlobalConstants } from 'src/app/global-constants';
+
+/* Edit a Job Profile handling component */
 
 @Component({
   selector: 'app-edit',
@@ -25,8 +27,6 @@ export class EditComponent implements OnInit {
   
   ngOnInit(): void {
     this.routeSub = this.route.params.subscribe(params => {
-      // console.log(params) //log the entire params object
-      console.log("params: ", params['jobProfileId']) //log the value of id
       this.jobProfileId = params['jobProfileId'];
     });
 
@@ -46,7 +46,6 @@ export class EditComponent implements OnInit {
     });
 
     this.http.get<any>(GlobalConstants.backendURL + '/jobProfile/' + this.jobProfileId).subscribe(responseData => {
-      // console.log(responseData);
       this.jobProfileForm.value = responseData.response;
     });
   }
@@ -56,7 +55,6 @@ export class EditComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.jobProfileForm.value);
     this.http.patch(GlobalConstants.backendURL + "/jobProfile/edit/", this.jobProfileForm.value).subscribe(responseData => {
       console.log(responseData);
     });

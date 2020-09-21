@@ -12,7 +12,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { GlobalConstants } from '../global-constants';
+
+/* Job Profiles of a user Module */
 
 @NgModule({
   declarations: [NewComponent, EditComponent],
@@ -28,8 +29,7 @@ import { GlobalConstants } from '../global-constants';
     MatSelectModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule,
-    // GlobalConstants
+    HttpClientModule
   ]
 })
 export class JobProfileModule { }

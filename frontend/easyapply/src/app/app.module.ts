@@ -23,6 +23,8 @@ import { JobProfileRoutingModule } from './job-profile/job-profile-routing.modul
 import { HttpClientModule } from '@angular/common/http';
 import { UserprofileService } from './services/userprofile.service';
 
+/* Main App Module */
+
 @NgModule({
   declarations: [
     AppComponent,

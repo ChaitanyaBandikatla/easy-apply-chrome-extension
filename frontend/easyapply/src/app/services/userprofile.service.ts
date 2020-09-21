@@ -5,6 +5,8 @@ import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 import { GlobalConstants } from '../global-constants';
 
+/* Services for Profile component */
+
 @Injectable({
   providedIn: 'root'
 })

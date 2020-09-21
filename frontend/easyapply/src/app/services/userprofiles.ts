@@ -1,3 +1,4 @@
+/* Userprofile class definition */
 export interface Userprofiles{
     jobProfileId: number;
     userId: number

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { UserprofileService } from '../services/userprofile.service'
 import { Userprofiles } from '../services/userprofiles'
 import { Router } from '@angular/router';
-import { GlobalConstants } from '../global-constants';
+
+/* Dashboard of a User */
 
 @Component({
   selector: 'app-dashboard',
