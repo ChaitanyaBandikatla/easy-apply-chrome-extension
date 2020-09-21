@@ -32,8 +32,8 @@ export class DashboardComponent implements OnInit {
   }
 
   onEditJobProfile(index) {//Edit and View are the same
-    console.log(index);
-    // this.router.navigateByUrl('jobProfile');
+    console.log(index + ", "  + this.profiles[index].jobProfileId);
+    this.router.navigateByUrl('jobProfile/' + this.profiles[index].jobProfileId + '/edit');
   }
 
   onDeleteJobProfile(index) {

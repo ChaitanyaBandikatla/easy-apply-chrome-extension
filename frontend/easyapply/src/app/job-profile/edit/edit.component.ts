@@ -19,30 +19,35 @@ export class EditComponent implements OnInit {
     private http: HttpClient,
     private route: ActivatedRoute) {
   }
-
+  
+  jobProfileForm: FormGroup;
   jobProfileId = 0;
-  jobProfileForm = this.formbuilder.group({
-      id: new FormControl(this.jobProfileId),
-      jobProfileName: new FormControl(''),
-      firstname: new FormControl(''),
-      middlename: new FormControl(''),
-      lastname: new FormControl(''),
-      email: new FormControl(''),
-      phone: new FormControl(''),
-      linkedinProfile: new FormControl(''),
-      website: new FormControl(''),
-  });
-
+  
   ngOnInit(): void {
     this.routeSub = this.route.params.subscribe(params => {
       // console.log(params) //log the entire params object
-      // console.log(params['id']) //log the value of id
-      this.jobProfileId = params['id'];
+      console.log("params: ", params['jobProfileId']) //log the value of id
+      this.jobProfileId = params['jobProfileId'];
+    });
+
+    this.jobProfileForm = this.formbuilder.group({
+        jobProfileId: new FormControl(this.jobProfileId),
+        jobProfileName: new FormControl(''),
+        jobType: new FormControl(''),
+        firstName: new FormControl(''),
+        lastName: new FormControl(''),
+        email: new FormControl(''),
+        phone: new FormControl(''),
+        linkedinProfile: new FormControl(''),
+        githubProfile: new FormControl(''),
+        website: new FormControl(''),
+        informationSource: new FormControl(''),
+        userId: new FormControl('')
     });
 
     this.http.get<any>(GlobalConstants.backendURL + '/jobProfile/' + this.jobProfileId).subscribe(responseData => {
       // console.log(responseData);
-      this.jobProfileForm = responseData.response;
+      this.jobProfileForm.value = responseData.response;
     });
   }
 
@@ -51,11 +56,10 @@ export class EditComponent implements OnInit {
   }
 
   onSubmit() {
-    // console.log(this.jobProfileForm.value);
-    this.http.patch(GlobalConstants.backendURL + "/jobProfile/edit", this.jobProfileForm).subscribe(responseData => {
+    console.log(this.jobProfileForm.value);
+    this.http.patch(GlobalConstants.backendURL + "/jobProfile/edit/", this.jobProfileForm.value).subscribe(responseData => {
       console.log(responseData);
     });
-    this.router.navigateByUrl('home');
-    //TO DO: perform Update action
+    this.router.navigateByUrl('dashboard');
   }
 }

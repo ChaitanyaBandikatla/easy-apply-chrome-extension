@@ -21,7 +21,6 @@ export class NewComponent {
       jobProfileName: new FormControl(''),
       jobType: new FormControl(''),
       firstName: new FormControl(''),
-      // middlename: new FormControl(''),
       lastName: new FormControl(''),
       email: new FormControl(''),
       phone: new FormControl(''),

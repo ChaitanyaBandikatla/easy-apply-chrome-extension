@@ -5,7 +5,7 @@ import { EditComponent } from './edit/edit.component';
 
 const routes: Routes = [
   { path: 'jobProfile/new', component: NewComponent },
-  { path: 'jobProfile/edit', component: EditComponent },
+  { path: 'jobProfile/:jobProfileId/edit', component: EditComponent },
 ];
 
 @NgModule({
