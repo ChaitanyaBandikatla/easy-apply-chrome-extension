@@ -41,7 +41,7 @@ Application portals parse the doc and fill out automatically. How is this featur
 
 
 
-## Auto Code Formatter used :
+## Auto Code Formatter/Style Checker used :
 
 Prettier java : https://github.com/jhipster/prettier-java License : [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
@@ -53,6 +53,12 @@ Codecov and Jacoco: https://github.com/codecov/example-java. License: Eclipse Pu
 
 Maven : https://github.com/apache/maven/blob/master/LICENSE License: [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
+## Package Manager used :
+
+Maven : https://github.com/apache/maven/blob/master/LICENSE License: [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+Nodemon : https://github.com/remy/nodemon/ License :  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
+
 
 ## References :
 
@@ -63,4 +69,4 @@ License Badge : https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba  License: N
 Why Badge :  https://github.com/dwyl/repo-badges License: No License<br />
 Open Source Basge : https://github.com/Naereen/badges  License : [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <br />
-
+Nodemon : https://github.com/remy/nodemon/ License :  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)] <br />
