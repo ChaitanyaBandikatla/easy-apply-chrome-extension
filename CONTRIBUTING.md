@@ -76,5 +76,25 @@ Please follow these steps to have your contribution considered by the maintainer
 
 While the prerequisites above must be satisfied prior to having your pull request reviewed, the reviewer(s) may ask you to complete additional design work, tests, or other changes before your pull request can be ultimately accepted.
 
+## Auto Code Formatter/Style Checker used :
+
+Prettier java : https://github.com/jhipster/prettier-java License : [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+Prettier :https://github.com/prettier/prettier License : [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
+
+## Code coverage tool used:
+
+Codecov and Jacoco: https://github.com/codecov/example-java. License: Eclipse Public License 1.0
+
+## Syntax Checker used:
+
+Maven : https://github.com/apache/maven/blob/master/LICENSE License: [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+## Package Manager used :
+
+Maven : https://github.com/apache/maven/blob/master/LICENSE License: [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+Nodemon : https://github.com/remy/nodemon/ License :  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
+
 
 > **Note:**: This article has been partly written from the [Contirbution article of the Atom](https://github.com/atom/atom/blob/master/CONTRIBUTING.md).
